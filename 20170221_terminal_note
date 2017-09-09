@@ -1,0 +1,2791 @@
+Last login: Mon Feb 20 21:55:48 on console
+MacBook-Pro-2:~ rabbithsu$ ssh deploy@192.168.0.101 -p 13122
+The authenticity of host '[192.168.0.101]:13122 ([192.168.0.101]:13122)' can't be established.
+ECDSA key fingerprint is SHA256:TFf/Jv1hKI/iekn98DdN27LouTJ+5SmhhpJF345xips.
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': yes
+Warning: Permanently added '[192.168.0.101]:13122' (ECDSA) to the list of known hosts.
+deploy@192.168.0.101's password: 
+Last login: Tue Feb 21 06:04:36 2017 from 192.168.0.109
+deploy@d338b86de195:~$ ls
+deploy@d338b86de195:~$ cd ..
+deploy@d338b86de195:/home$ ls
+deploy
+deploy@d338b86de195:/home$ cd deploy/
+deploy@d338b86de195:~$ cd ..
+deploy@d338b86de195:/home$ cd ..
+deploy@d338b86de195:/$ ls
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+deploy@d338b86de195:/$ cd home
+deploy@d338b86de195:/home$ ls
+deploy
+deploy@d338b86de195:/home$ cd deploy/
+deploy@d338b86de195:~$ sudo apt-get
+-bash: sudo: command not found
+deploy@d338b86de195:~$ -version
+-bash: -version: command not found
+deploy@d338b86de195:~$ lsb_release -a
+-bash: lsb_release: command not found
+deploy@d338b86de195:~$ lsb_release -a
+-bash: lsb_release: command not found
+deploy@d338b86de195:~$ ls
+deploy@d338b86de195:~$ sudo lsb_release -a
+-bash: sudo: command not found
+deploy@d338b86de195:~$ sudo apt-get
+-bash: sudo: command not found
+deploy@d338b86de195:~$ apt-get   
+apt 1.2.18 (amd64)
+Usage: apt-get [options] command
+       apt-get [options] install|remove pkg1 [pkg2 ...]
+       apt-get [options] source pkg1 [pkg2 ...]
+
+apt-get is a command line interface for retrieval of packages
+and information about them from authenticated sources and
+for installation, upgrade and removal of packages together
+with their dependencies.
+
+Most used commands:
+  update - Retrieve new lists of packages
+  upgrade - Perform an upgrade
+  install - Install new packages (pkg is libc6 not libc6.deb)
+  remove - Remove packages
+  purge - Remove packages and config files
+  autoremove - Remove automatically all unused packages
+  dist-upgrade - Distribution upgrade, see apt-get(8)
+  dselect-upgrade - Follow dselect selections
+  build-dep - Configure build-dependencies for source packages
+  clean - Erase downloaded archive files
+  autoclean - Erase old downloaded archive files
+  check - Verify that there are no broken dependencies
+  source - Download source archives
+  download - Download the binary package into the current directory
+  changelog - Download and display the changelog for the given package
+
+See apt-get(8) for more information about the available commands.
+Configuration options and syntax is detailed in apt.conf(5).
+Information about how to configure sources can be found in sources.list(5).
+Package and version choices can be expressed via apt_preferences(5).
+Security details are available in apt-secure(8).
+                                        This APT has Super Cow Powers.
+deploy@d338b86de195:~$ apt-get update
+W: chmod 0700 of directory /var/lib/apt/lists/partial failed - SetupAPTPartialDirectory (1: Operation not permitted)
+E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
+E: Unable to lock directory /var/lib/apt/lists/
+E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)
+E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
+deploy@d338b86de195:~$ java -version
+-bash: java: command not found
+deploy@d338b86de195:~$ ^C           
+deploy@d338b86de195:~$ exit 
+logout
+Connection to 192.168.0.101 closed.
+MacBook-Pro-2:~ rabbithsu$ ssh deploy@192.168.0.101
+The authenticity of host '192.168.0.101 (192.168.0.101)' can't be established.
+ECDSA key fingerprint is SHA256:rA7Yj3/PS0L1Rx672dvhELb3A8EOfwk+EjwsxJfgumM.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '192.168.0.101' (ECDSA) to the list of known hosts.
+deploy@192.168.0.101's password: 
+
+MacBook-Pro-2:~ rabbithsu$ ssh agtop@192.168.0.101
+agtop@192.168.0.101's password: 
+Welcome to Ubuntu 14.04.3 LTS (GNU/Linux 3.19.0-25-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+500 packages can be updated.
+296 updates are security updates.
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Last login: Tue Feb 21 14:12:04 2017 from 192.168.0.109
+agtop@agtop-mountain:~$ docker -ti exec ubuntu_16.04 bash
+flag provided but not defined: -ti
+See 'docker --help'.
+agtop@agtop-mountain:~$ docker exec -ti ubuntu_16.04 bash
+root@d338b86de195:/# cat /etc/issue
+Ubuntu 16.04.1 LTS \n \l
+
+<ttps://www.dropbox.com/s/zji3gwcm9gnzeri/ModelCode.zip?dl=0                 
+--2017-02-21 06:32:23--  https://www.dropbox.com/s/zji3gwcm9gnzeri/ModelCode.zip?dl=0
+Resolving www.dropbox.com (www.dropbox.com)... 162.125.82.1
+Connecting to www.dropbox.com (www.dropbox.com)|162.125.82.1|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://dl.dropboxusercontent.com/content_link/gt3ZFqA7RARj0Zc7i4A0iiXVAFaFUv4a6MuMkk0e7BwXNd7r6DxAK5hAGSx9uedJ/file [following]
+--2017-02-21 06:32:24--  https://dl.dropboxusercontent.com/content_link/gt3ZFqA7RARj0Zc7i4A0iiXVAFaFUv4a6MuMkk0e7BwXNd7r6DxAK5hAGSx9uedJ/file
+Resolving dl.dropboxusercontent.com (dl.dropboxusercontent.com)... 162.125.82.6
+Connecting to dl.dropboxusercontent.com (dl.dropboxusercontent.com)|162.125.82.6|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 160155155 (153M) [application/zip]
+Saving to: 'ModelCode.zip?dl=0'
+
+ModelCode.zip?dl=0  100%[===================>] 152.74M  11.3MB/s    in 17s     
+
+2017-02-21 06:32:43 (9.16 MB/s) - 'ModelCode.zip?dl=0' saved [160155155/160155155]
+
+root@d338b86de195:/# ls
+ModelCode.zip?dl=0  boot  etc   lib    media  opt   root  sbin  sys  usr
+bin                 dev   home  lib64  mnt    proc  run   srv   tmp  var
+root@d338b86de195:/# mv ModelCode.zip\?dl\=0 ModelCode.zip
+root@d338b86de195:/# ll
+total 156480
+drwxr-xr-x  48 root root      4096 Feb 21 06:33 ./
+drwxr-xr-x  48 root root      4096 Feb 21 06:33 ../
+-rwxr-xr-x   1 root root         0 Feb  8 09:55 .dockerenv*
+-rwxr-xr-x   1 root root         0 Feb  8 09:55 .dockerinit*
+-rw-r--r--   1 root root 160155155 Feb 21 06:32 ModelCode.zip
+drwxr-xr-x   2 root root      4096 Jan 19 16:33 bin/
+drwxr-xr-x   2 root root      4096 Apr 12  2016 boot/
+drwxr-xr-x   5 root root       360 Feb  8 09:55 dev/
+drwxr-xr-x  65 root root      4096 Feb  8 09:59 etc/
+drwxr-xr-x   3 root root      4096 Feb  8 09:59 home/
+drwxr-xr-x  10 root root      4096 Jan 20 22:01 lib/
+drwxr-xr-x   2 root root      4096 Jan 19 16:32 lib64/
+drwxr-xr-x   2 root root      4096 Jan 19 16:31 media/
+drwxr-xr-x   2 root root      4096 Jan 19 16:31 mnt/
+drwxr-xr-x   2 root root      4096 Jan 19 16:31 opt/
+dr-xr-xr-x 842 root root         0 Feb  8 09:55 proc/
+drwx------   2 root root      4096 Feb 21 06:32 root/
+drwxr-xr-x   7 root root      4096 Feb  8 10:00 run/
+drwxr-xr-x   2 root root      4096 Jan 20 21:43 sbin/
+drwxr-xr-x   2 root root      4096 Jan 19 16:31 srv/
+dr-xr-xr-x  13 root root         0 Nov 25 07:57 sys/
+drwxrwxrwt   2 root root      4096 Jan 19 16:33 tmp/
+drwxr-xr-x  16 root root      4096 Jan 20 22:01 usr/
+drwxr-xr-x  20 root root      4096 Feb 21 06:21 var/
+root@d338b86de195:/# mkdir nccu
+root@d338b86de195:/# mv ModelCode.zip nccu/
+root@d338b86de195:/# ll
+total 76
+drwxr-xr-x  49 root root 4096 Feb 21 06:33 ./
+drwxr-xr-x  49 root root 4096 Feb 21 06:33 ../
+-rwxr-xr-x   1 root root    0 Feb  8 09:55 .dockerenv*
+-rwxr-xr-x   1 root root    0 Feb  8 09:55 .dockerinit*
+drwxr-xr-x   2 root root 4096 Jan 19 16:33 bin/
+drwxr-xr-x   2 root root 4096 Apr 12  2016 boot/
+drwxr-xr-x   5 root root  360 Feb  8 09:55 dev/
+drwxr-xr-x  65 root root 4096 Feb  8 09:59 etc/
+drwxr-xr-x   3 root root 4096 Feb  8 09:59 home/
+drwxr-xr-x  10 root root 4096 Jan 20 22:01 lib/
+drwxr-xr-x   2 root root 4096 Jan 19 16:32 lib64/
+drwxr-xr-x   2 root root 4096 Jan 19 16:31 media/
+drwxr-xr-x   2 root root 4096 Jan 19 16:31 mnt/
+drwxr-xr-x   2 root root 4096 Feb 21 06:33 nccu/
+drwxr-xr-x   2 root root 4096 Jan 19 16:31 opt/
+dr-xr-xr-x 839 root root    0 Feb  8 09:55 proc/
+drwx------   2 root root 4096 Feb 21 06:32 root/
+drwxr-xr-x   7 root root 4096 Feb  8 10:00 run/
+drwxr-xr-x   2 root root 4096 Jan 20 21:43 sbin/
+drwxr-xr-x   2 root root 4096 Jan 19 16:31 srv/
+dr-xr-xr-x  13 root root    0 Nov 25 07:57 sys/
+drwxrwxrwt   2 root root 4096 Jan 19 16:33 tmp/
+drwxr-xr-x  16 root root 4096 Jan 20 22:01 usr/
+drwxr-xr-x  20 root root 4096 Feb 21 06:21 var/
+root@d338b86de195:/# cd nccu
+root@d338b86de195:/nccu# ll
+total 156416
+drwxr-xr-x  2 root root      4096 Feb 21 06:33 ./
+drwxr-xr-x 49 root root      4096 Feb 21 06:33 ../
+-rw-r--r--  1 root root 160155155 Feb 21 06:32 ModelCode.zip
+root@d338b86de195:/nccu# gzip -d ModelCode.zip 
+gzip: ModelCode.zip: unknown suffix -- ignored
+root@d338b86de195:/nccu# apt-get install gzip 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+gzip is already the newest version (1.6-4ubuntu1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+root@d338b86de195:/nccu# gzip -d ModelCode.zip 
+gzip: ModelCode.zip: unknown suffix -- ignored
+root@d338b86de195:/nccu# gzip --help
+Usage: gzip [OPTION]... [FILE]...
+Compress or uncompress FILEs (by default, compress FILES in-place).
+
+Mandatory arguments to long options are mandatory for short options too.
+
+  -c, --stdout      write on standard output, keep original files unchanged
+  -d, --decompress  decompress
+  -f, --force       force overwrite of output file and compress links
+  -h, --help        give this help
+  -k, --keep        keep (don't delete) input files
+  -l, --list        list compressed file contents
+  -L, --license     display software license
+  -n, --no-name     do not save or restore the original name and time stamp
+  -N, --name        save or restore the original name and time stamp
+  -q, --quiet       suppress all warnings
+  -r, --recursive   operate recursively on directories
+  -S, --suffix=SUF  use suffix SUF on compressed files
+  -t, --test        test compressed file integrity
+  -v, --verbose     verbose mode
+  -V, --version     display version number
+  -1, --fast        compress faster
+  -9, --best        compress better
+  --rsyncable       Make rsync-friendly archive
+
+With no FILE, or when FILE is -, read standard input.
+
+Report bugs to <bug-gzip@gnu.org>.
+root@d338b86de195:/nccu# sudo apt-get install unzip
+bash: sudo: command not found
+root@d338b86de195:/nccu# apt-get install unzip     
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  zip
+The following NEW packages will be installed:
+  unzip
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 158 kB of archives.
+After this operation, 530 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 unzip amd64 6.0-20ubuntu1 [158 kB]
+Fetched 158 kB in 1s (96.8 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package unzip.
+(Reading database ... 11915 files and directories currently installed.)
+Preparing to unpack .../unzip_6.0-20ubuntu1_amd64.deb ...
+Unpacking unzip (6.0-20ubuntu1) ...
+Processing triggers for mime-support (3.59ubuntu1) ...
+Setting up unzip (6.0-20ubuntu1) ...
+root@d338b86de195:/nccu# unzip -d ModelCode.zip   
+UnZip 6.00 of 20 April 2009, by Debian. Original by Info-ZIP.
+
+Usage: unzip [-Z] [-opts[modifiers]] file[.zip] [list] [-x xlist] [-d exdir]
+  Default action is to extract files in list, except those in xlist, to exdir;
+  file[.zip] may be a wildcard.  -Z => ZipInfo mode ("unzip -Z" for usage).
+
+  -p  extract files to pipe, no messages     -l  list files (short format)
+  -f  freshen existing files, create none    -t  test compressed archive data
+  -u  update files, create if necessary      -z  display archive comment only
+  -v  list verbosely/show version info       -T  timestamp archive to latest
+  -x  exclude files that follow (in xlist)   -d  extract files into exdir
+modifiers:
+  -n  never overwrite existing files         -q  quiet mode (-qq => quieter)
+  -o  overwrite files WITHOUT prompting      -a  auto-convert any text files
+  -j  junk paths (do not make directories)   -aa treat ALL files as text
+  -U  use escapes for all non-ASCII Unicode  -UU ignore any Unicode fields
+  -C  match filenames case-insensitively     -L  make (some) names lowercase
+  -X  restore UID/GID info                   -V  retain VMS version numbers
+  -K  keep setuid/setgid/tacky permissions   -M  pipe through "more" pager
+  -O CHARSET  specify a character encoding for DOS, Windows and OS/2 archives
+  -I CHARSET  specify a character encoding for UNIX and other archives
+
+See "unzip -hh" or unzip.txt for more help.  Examples:
+  unzip data1 -x joe   => extract all files except joe from zipfile data1.zip
+  unzip -p foo | more  => send contents of foo.zip via pipe into program more
+  unzip -fo foo ReadMe => quietly replace existing ReadMe if archive file newer
+root@d338b86de195:/nccu# unzip ModelCode.zip -d 
+error:  must specify directory to which to extract with -d option
+root@d338b86de195:/nccu# unzip ModelCode.zip    
+Archive:  ModelCode.zip
+   creating: ModelCode/
+  inflating: ModelCode/xampp-linux-x64-7.0.9-1-installer.run  
+  inflating: ModelCode/openfire_4.0.3_all.deb  
+  inflating: ModelCode/upload_price.py  
+  inflating: ModelCode/upload_history.py  
+  inflating: ModelCode/upload.py     
+  inflating: ModelCode/stockID_Name.txt  
+  inflating: ModelCode/scheduler_test.py  
+  inflating: ModelCode/predict.py    
+  inflating: ModelCode/merge.py      
+  inflating: ModelCode/ID.csv        
+  inflating: ModelCode/google-crawler.py  
+  inflating: ModelCode/GetFilePaths.pyc  
+  inflating: ModelCode/GetFilePaths.py  
+  inflating: ModelCode/FileToList.pyc  
+  inflating: ModelCode/FileToList.py  
+  inflating: ModelCode/cloud_scheduler.py  
+  inflating: ModelCode/cloud.sh      
+   creating: ModelCode/web/
+  inflating: ModelCode/web/newsphp7.php  
+  inflating: ModelCode/web/news.php  
+   creating: ModelCode/news/
+   creating: ModelCode/stockReturn/
+  inflating: ModelCode/stockReturn/priceinfo.txt  
+   creating: ModelCode/stock_price/
+   creating: ModelCode/prepareFile/
+  inflating: ModelCode/prepareFile/ScoredWords4.txt  
+  inflating: ModelCode/prepareFile/ScoredWords5.txt  
+  inflating: ModelCode/prepareFile/ScoredWords1.txt  
+  inflating: ModelCode/prepareFile/coefficient.txt  
+  inflating: ModelCode/prepareFile/NegativeWords.txt  
+  inflating: ModelCode/prepareFile/ScoredWords2.txt  
+  inflating: ModelCode/prepareFile/stockID_Name.txt  
+  inflating: ModelCode/prepareFile/PositiveWords.txt  
+  inflating: ModelCode/prepareFile/ScoredWords3.txt  
+   creating: ModelCode/newsPNV/
+   creating: ModelCode/merge/
+   creating: ModelCode/financeReport/
+   creating: ModelCode/news/2016/
+   creating: ModelCode/stockReturn/tej/
+   creating: ModelCode/newsPNV/2016/
+   creating: ModelCode/merge/2016/
+   creating: ModelCode/financeReport/tej/
+   creating: ModelCode/news/2016/12/
+   creating: ModelCode/stockReturn/tej/2016/
+  inflating: ModelCode/stockReturn/tej/2016/20161204.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161203.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161202.txt  
+  inflating: ModelCode/stockReturn/tej/2016/2016122.txt  
+  inflating: ModelCode/stockReturn/tej/2016/fix_price.py  
+  inflating: ModelCode/stockReturn/tej/2016/20161112.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161129.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161128.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161127.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161126.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161125.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161124.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161123.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161122.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161121.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161120.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161119.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161118.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161117.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161116.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161115.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161114.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161113.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161111.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161016.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161201.txt  
+  inflating: ModelCode/stockReturn/tej/2016/20161130.txt  
+   creating: ModelCode/newsPNV/2016/12/
+  inflating: ModelCode/newsPNV/2016/12/20161204.txt  
+  inflating: ModelCode/newsPNV/2016/12/20161203.txt  
+  inflating: ModelCode/newsPNV/2016/12/20161202.txt  
+  inflating: ModelCode/newsPNV/2016/12/20161201.txt  
+   creating: ModelCode/newsPNV/2016/11/
+  inflating: ModelCode/newsPNV/2016/11/20161130.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161129.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161128.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161127.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161126.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161125.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161124.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161123.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161122.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161121.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161120.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161119.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161118.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161117.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161116.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161115.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161114.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161113.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161112.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161111.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161110.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161109.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161108.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161107.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161106.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161105.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161104.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161103.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161102.txt  
+  inflating: ModelCode/newsPNV/2016/11/20161101.txt  
+   creating: ModelCode/merge/2016/12/
+  inflating: ModelCode/merge/2016/12/20161204.txt  
+  inflating: ModelCode/merge/2016/12/20161203.txt  
+  inflating: ModelCode/merge/2016/12/20161202.txt  
+  inflating: ModelCode/merge/2016/12/20161201.txt  
+   creating: ModelCode/merge/2016/11/
+  inflating: ModelCode/merge/2016/11/20161125.txt  
+  inflating: ModelCode/merge/2016/11/20161126.txt  
+  inflating: ModelCode/merge/2016/11/20161127.txt  
+  inflating: ModelCode/merge/2016/11/20161128.txt  
+  inflating: ModelCode/merge/2016/11/20161129.txt  
+  inflating: ModelCode/merge/2016/11/20161130.txt  
+  inflating: ModelCode/merge/2016/11/20161118.txt  
+  inflating: ModelCode/merge/2016/11/20161119.txt  
+  inflating: ModelCode/merge/2016/11/20161120.txt  
+  inflating: ModelCode/merge/2016/11/20161121.txt  
+  inflating: ModelCode/merge/2016/11/20161122.txt  
+  inflating: ModelCode/merge/2016/11/20161123.txt  
+  inflating: ModelCode/merge/2016/11/20161124.txt  
+   creating: ModelCode/financeReport/tej/2016/
+  inflating: ModelCode/financeReport/tej/2016/201606.txt  
+  inflating: ModelCode/financeReport/tej/2016/201603.txt  
+  inflating: ModelCode/financeReport/tej/2016/201609.txt  
+   creating: ModelCode/financeReport/tej/2015/
+  inflating: ModelCode/financeReport/tej/2015/201506.txt  
+  inflating: ModelCode/financeReport/tej/2015/201509.txt  
+  inflating: ModelCode/financeReport/tej/2015/201512.txt  
+   creating: ModelCode/news/2016/12/20161201/
+  inflating: ModelCode/news/2016/12/20161201/[20161201][4#U5927#U623f#U4ef2 11#U6708#U5e02#U6cc1#U65fa#U5b63#U4e0d#U65fa #U5168#U53f0#U4ea4#U6613#U91cf#U80fd#U50c5#U6708#U589e0.2#Uff5e8#Uff05#Uff1b#U60df#U96d9#U5317#U5e02#U4eba#U6c23#U660e#U986f#U56de#U6eab]##1473.txt  
+   creating: ModelCode/stockReturn/tej/2016/old/
+  inflating: ModelCode/stockReturn/tej/2016/old/20161125.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161129.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161127.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161128.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161126.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161121.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161115.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161117.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161122.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161119.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161114.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161120.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161116.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161113.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161112.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161118.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161016.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161123.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161111.txt  
+  inflating: ModelCode/stockReturn/tej/2016/old/20161124.txt  
+   creating: ModelCode/stockReturn/tej/2016/fix/
+  inflating: ModelCode/stockReturn/tej/2016/fix/20161129.txt  
+  inflating: ModelCode/stockReturn/tej/2016/fix/20161128.txt  
+  inflating: ModelCode/stockReturn/tej/2016/fix/20161127.txt  
+  inflating: ModelCode/stockReturn/tej/2016/fix/20161126.txt  
+  inflating: ModelCode/stockReturn/tej/2016/fix/20161125.txt  
+  inflating: ModelCode/stockReturn/tej/2016/fix/20161124.txt  
+  inflating: ModelCode/stockReturn/tej/2016/fix/20161123.txt  
+  inflating: ModelCode/stockReturn/tej/2016/fix/20161122.txt  
+  inflating: ModelCode/stockReturn/tej/2016/fix/20161121.txt  
+  inflating: ModelCode/stockReturn/tej/2016/fix/20161120.txt  
+  inflating: ModelCode/stockReturn/tej/2016/fix/20161119.txt  
+  inflating: ModelCode/stockReturn/tej/2016/fix/20161118.txt  
+  inflating: ModelCode/stockReturn/tej/2016/fix/20161117.txt  
+  inflating: ModelCode/stockReturn/tej/2016/fix/20161116.txt  
+  inflating: ModelCode/stockReturn/tej/2016/fix/20161115.txt  
+  inflating: ModelCode/stockReturn/tej/2016/fix/20161114.txt  
+  inflating: ModelCode/stockReturn/tej/2016/fix/20161113.txt  
+  inflating: ModelCode/stockReturn/tej/2016/fix/20161112.txt  
+root@d338b86de195:/nccu# ls
+ModelCode  ModelCode.zip
+root@d338b86de195:/nccu# cd ModelCode
+root@d338b86de195:/nccu/ModelCode# ls
+FileToList.py       openfire_4.0.3_all.deb
+FileToList.pyc      predict.py
+GetFilePaths.py     prepareFile
+GetFilePaths.pyc    scheduler_test.py
+ID.csv              stockID_Name.txt
+cloud.sh            stockReturn
+cloud_scheduler.py  stock_price
+financeReport       upload.py
+google-crawler.py   upload_history.py
+merge               upload_price.py
+merge.py            web
+news                xampp-linux-x64-7.0.9-1-installer.run
+newsPNV
+root@d338b86de195:/nccu/ModelCode# sudo apt-get install python-pip                                                    
+bash: sudo: command not found
+root@d338b86de195:/nccu/ModelCode# apt-get install python-pip     
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  binutils build-essential bzip2 cpp cpp-5 dpkg-dev fakeroot g++ g++-5 gcc gcc-5 ifupdown iproute2 isc-dhcp-client
+  isc-dhcp-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan2 libatm1
+  libatomic1 libc-dev-bin libc6-dev libcc1-0 libcilkrts5 libdns-export162 libdpkg-perl libexpat1-dev libfakeroot
+  libffi6 libfile-fcntllock-perl libgcc-5-dev libgdbm3 libgmp10 libgomp1 libisc-export160 libisl15 libitm1 liblsan0
+  libmnl0 libmpc3 libmpfr4 libmpx0 libperl5.22 libpython-all-dev libpython-dev libpython-stdlib libpython2.7
+  libpython2.7-dev libpython2.7-minimal libpython2.7-stdlib libquadmath0 libstdc++-5-dev libtsan0 libubsan0
+  libxtables11 linux-libc-dev make manpages manpages-dev netbase patch perl perl-modules-5.22 python python-all
+  python-all-dev python-dev python-minimal python-pip-whl python-pkg-resources python-setuptools python-wheel
+  python2.7 python2.7-dev python2.7-minimal rename xz-utils
+Suggested packages:
+  binutils-doc bzip2-doc cpp-doc gcc-5-locales debian-keyring g++-multilib g++-5-multilib gcc-5-doc libstdc++6-5-dbg
+  gcc-multilib autoconf automake libtool flex bison gdb gcc-doc gcc-5-multilib libgcc1-dbg libgomp1-dbg libitm1-dbg
+  libatomic1-dbg libasan2-dbg liblsan0-dbg libtsan0-dbg libubsan0-dbg libcilkrts5-dbg libmpx0-dbg libquadmath0-dbg
+  ppp rdnssd iproute2-doc resolvconf avahi-autoipd isc-dhcp-client-ddns apparmor glibc-doc libstdc++-5-doc make-doc
+  man-browser ed diffutils-doc perl-doc libterm-readline-gnu-perl | libterm-readline-perl-perl python-doc python-tk
+  python-setuptools-doc python2.7-doc binfmt-support
+The following NEW packages will be installed:
+  binutils build-essential bzip2 cpp cpp-5 dpkg-dev fakeroot g++ g++-5 gcc gcc-5 ifupdown iproute2 isc-dhcp-client
+  isc-dhcp-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan2 libatm1
+  libatomic1 libc-dev-bin libc6-dev libcc1-0 libcilkrts5 libdns-export162 libdpkg-perl libexpat1-dev libfakeroot
+  libffi6 libfile-fcntllock-perl libgcc-5-dev libgdbm3 libgmp10 libgomp1 libisc-export160 libisl15 libitm1 liblsan0
+  libmnl0 libmpc3 libmpfr4 libmpx0 libperl5.22 libpython-all-dev libpython-dev libpython-stdlib libpython2.7
+  libpython2.7-dev libpython2.7-minimal libpython2.7-stdlib libquadmath0 libstdc++-5-dev libtsan0 libubsan0
+  libxtables11 linux-libc-dev make manpages manpages-dev netbase patch perl perl-modules-5.22 python python-all
+  python-all-dev python-dev python-minimal python-pip python-pip-whl python-pkg-resources python-setuptools
+  python-wheel python2.7 python2.7-dev python2.7-minimal rename xz-utils
+0 upgraded, 79 newly installed, 0 to remove and 0 not upgraded.
+Need to get 82.9 MB of archives.
+After this operation, 257 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 libatm1 amd64 1:2.5.1-1.5 [24.2 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmnl0 amd64 1.0.3-5 [12.0 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgdbm3 amd64 1.8.3-13.1 [16.9 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial/main amd64 perl-modules-5.22 all 5.22.1-9 [2641 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial/main amd64 libperl5.22 amd64 5.22.1-9 [3371 kB]                         
+Get:6 http://archive.ubuntu.com/ubuntu xenial/main amd64 perl amd64 5.22.1-9 [237 kB]                                 
+Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7-minimal amd64 2.7.12-1ubuntu0~16.04.1 [339 kB]
+Get:8 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python2.7-minimal amd64 2.7.12-1ubuntu0~16.04.1 [1295 kB]
+Get:9 http://archive.ubuntu.com/ubuntu xenial/main amd64 python-minimal amd64 2.7.11-1 [28.2 kB]                      
+Get:10 http://archive.ubuntu.com/ubuntu xenial/main amd64 libffi6 amd64 3.2.1-4 [17.8 kB]                             
+Get:11 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7-stdlib amd64 2.7.12-1ubuntu0~16.04.1 [1884 kB]
+Get:12 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python2.7 amd64 2.7.12-1ubuntu0~16.04.1 [224 kB]    
+Get:13 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpython-stdlib amd64 2.7.11-1 [7656 B]                    
+Get:14 http://archive.ubuntu.com/ubuntu xenial/main amd64 python amd64 2.7.11-1 [137 kB]                              
+Get:15 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgmp10 amd64 2:6.1.0+dfsg-2 [240 kB]                      
+Get:16 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmpfr4 amd64 3.1.4-1 [191 kB]                             
+Get:17 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmpc3 amd64 1.0.3-1 [39.7 kB]                             
+Get:18 http://archive.ubuntu.com/ubuntu xenial/main amd64 bzip2 amd64 1.0.6-8 [32.7 kB]                               
+Get:19 http://archive.ubuntu.com/ubuntu xenial/main amd64 iproute2 amd64 4.3.0-1ubuntu3 [522 kB]                      
+Get:20 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 ifupdown amd64 0.8.10ubuntu1.2 [54.9 kB]            
+Ign:21 http://archive.ubuntu.com/ubuntu xenial-security/main amd64 libisc-export160 amd64 1:9.10.3.dfsg.P4-8ubuntu1.4 
+Ign:22 http://archive.ubuntu.com/ubuntu xenial-security/main amd64 libdns-export162 amd64 1:9.10.3.dfsg.P4-8ubuntu1.4 
+Get:23 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 isc-dhcp-client amd64 4.3.3-5ubuntu12.6 [223 kB]    
+Get:24 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 isc-dhcp-common amd64 4.3.3-5ubuntu12.6 [105 kB]    
+Get:25 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxtables11 amd64 1.6.0-2ubuntu3 [27.2 kB]                 
+Get:26 http://archive.ubuntu.com/ubuntu xenial/main amd64 netbase all 5.3 [12.9 kB]                                   
+Get:27 http://archive.ubuntu.com/ubuntu xenial/main amd64 manpages all 4.04-2 [1087 kB]                               
+Get:28 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 binutils amd64 2.26.1-1ubuntu1~16.04.3 [2310 kB]    
+Get:29 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libc-dev-bin amd64 2.23-0ubuntu5 [68.7 kB]          
+Ign:30 http://archive.ubuntu.com/ubuntu xenial-security/main amd64 linux-libc-dev amd64 4.4.0-59.80                   
+Get:31 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libc6-dev amd64 2.23-0ubuntu5 [2078 kB]             
+Get:32 http://archive.ubuntu.com/ubuntu xenial/main amd64 libisl15 amd64 0.16.1-1 [524 kB]                            
+Get:33 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 cpp-5 amd64 5.4.0-6ubuntu1~16.04.4 [7653 kB]        
+Get:34 http://archive.ubuntu.com/ubuntu xenial/main amd64 cpp amd64 4:5.3.1-1ubuntu1 [27.7 kB]                        
+Get:35 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcc1-0 amd64 5.4.0-6ubuntu1~16.04.4 [38.8 kB]     
+Get:36 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgomp1 amd64 5.4.0-6ubuntu1~16.04.4 [55.0 kB]     
+Get:37 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libitm1 amd64 5.4.0-6ubuntu1~16.04.4 [27.4 kB]      
+Get:38 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libatomic1 amd64 5.4.0-6ubuntu1~16.04.4 [8912 B]    
+Get:39 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libasan2 amd64 5.4.0-6ubuntu1~16.04.4 [264 kB]      
+Get:40 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 liblsan0 amd64 5.4.0-6ubuntu1~16.04.4 [105 kB]      
+Get:41 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtsan0 amd64 5.4.0-6ubuntu1~16.04.4 [244 kB]      
+Get:42 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libubsan0 amd64 5.4.0-6ubuntu1~16.04.4 [95.3 kB]    
+Get:43 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcilkrts5 amd64 5.4.0-6ubuntu1~16.04.4 [40.1 kB]  
+Get:44 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libmpx0 amd64 5.4.0-6ubuntu1~16.04.4 [9766 B]       
+Get:45 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libquadmath0 amd64 5.4.0-6ubuntu1~16.04.4 [131 kB]  
+Get:46 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgcc-5-dev amd64 5.4.0-6ubuntu1~16.04.4 [2237 kB] 
+Get:47 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 gcc-5 amd64 5.4.0-6ubuntu1~16.04.4 [8577 kB]        
+Get:48 http://archive.ubuntu.com/ubuntu xenial/main amd64 gcc amd64 4:5.3.1-1ubuntu1 [5244 B]                         
+Get:49 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libstdc++-5-dev amd64 5.4.0-6ubuntu1~16.04.4 [1426 kB]
+Get:50 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 g++-5 amd64 5.4.0-6ubuntu1~16.04.4 [8300 kB]        
+Get:51 http://archive.ubuntu.com/ubuntu xenial/main amd64 g++ amd64 4:5.3.1-1ubuntu1 [1504 B]                         
+Get:52 http://archive.ubuntu.com/ubuntu xenial/main amd64 make amd64 4.1-6 [151 kB]                                   
+Get:53 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdpkg-perl all 1.18.4ubuntu1.1 [195 kB]           
+Get:54 http://archive.ubuntu.com/ubuntu xenial/main amd64 xz-utils amd64 5.1.1alpha+20120614-2ubuntu2 [78.8 kB]       
+Get:55 http://archive.ubuntu.com/ubuntu xenial/main amd64 patch amd64 2.7.5-1 [90.4 kB]                               
+Get:56 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 dpkg-dev all 1.18.4ubuntu1.1 [584 kB]               
+Get:57 http://archive.ubuntu.com/ubuntu xenial/main amd64 build-essential amd64 12.1ubuntu2 [4758 B]                  
+Get:58 http://archive.ubuntu.com/ubuntu xenial/main amd64 libfakeroot amd64 1.20.2-1ubuntu1 [25.5 kB]                 
+Get:59 http://archive.ubuntu.com/ubuntu xenial/main amd64 fakeroot amd64 1.20.2-1ubuntu1 [61.8 kB]                    
+Get:60 http://archive.ubuntu.com/ubuntu xenial/main amd64 libalgorithm-diff-perl all 1.19.03-1 [47.6 kB]              
+Get:61 http://archive.ubuntu.com/ubuntu xenial/main amd64 libalgorithm-diff-xs-perl amd64 0.04-4build1 [11.0 kB]      
+Get:62 http://archive.ubuntu.com/ubuntu xenial/main amd64 libalgorithm-merge-perl all 0.08-3 [12.0 kB]                
+Get:63 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libexpat1-dev amd64 2.1.0-7ubuntu0.16.04.2 [115 kB] 
+Get:64 http://archive.ubuntu.com/ubuntu xenial/main amd64 libfile-fcntllock-perl amd64 0.22-3 [32.0 kB]               
+Get:65 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7 amd64 2.7.12-1ubuntu0~16.04.1 [1070 kB]
+Get:66 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7-dev amd64 2.7.12-1ubuntu0~16.04.1 [27.8 MB]
+Get:67 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpython-dev amd64 2.7.11-1 [7728 B]                       
+Get:68 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpython-all-dev amd64 2.7.11-1 [992 B]                    
+Get:69 http://archive.ubuntu.com/ubuntu xenial/main amd64 manpages-dev all 4.04-2 [2048 kB]                           
+Get:70 http://archive.ubuntu.com/ubuntu xenial/main amd64 python-all amd64 2.7.11-1 [978 B]                           
+Get:71 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python2.7-dev amd64 2.7.12-1ubuntu0~16.04.1 [276 kB]
+Get:72 http://archive.ubuntu.com/ubuntu xenial/main amd64 python-dev amd64 2.7.11-1 [1160 B]                          
+Get:73 http://archive.ubuntu.com/ubuntu xenial/main amd64 python-all-dev amd64 2.7.11-1 [1000 B]                      
+Get:74 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 python-pip-whl all 8.1.1-2ubuntu0.4 [1110 kB]   
+Get:75 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 python-pip all 8.1.1-2ubuntu0.4 [144 kB]        
+Get:76 http://archive.ubuntu.com/ubuntu xenial/main amd64 python-pkg-resources all 20.7.0-1 [108 kB]                  
+Get:77 http://archive.ubuntu.com/ubuntu xenial/main amd64 python-setuptools all 20.7.0-1 [169 kB]                     
+Get:78 http://archive.ubuntu.com/ubuntu xenial/universe amd64 python-wheel all 0.29.0-1 [48.0 kB]                     
+Get:79 http://archive.ubuntu.com/ubuntu xenial/main amd64 rename all 0.20-4 [12.0 kB]                                 
+Err:21 http://archive.ubuntu.com/ubuntu xenial-security/main amd64 libisc-export160 amd64 1:9.10.3.dfsg.P4-8ubuntu1.4 
+  404  Not Found [IP: 91.189.88.161 80]
+Err:22 http://archive.ubuntu.com/ubuntu xenial-security/main amd64 libdns-export162 amd64 1:9.10.3.dfsg.P4-8ubuntu1.4 
+  404  Not Found [IP: 91.189.88.161 80]
+Err:30 http://archive.ubuntu.com/ubuntu xenial-security/main amd64 linux-libc-dev amd64 4.4.0-59.80                   
+  404  Not Found [IP: 91.189.88.161 80]
+Fetched 81.2 MB in 1min 8s (1180 kB/s)                                                                                
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/b/bind9/libisc-export160_9.10.3.dfsg.P4-8ubuntu1.4_amd64.deb  404  Not Found [IP: 91.189.88.161 80]
+
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/b/bind9/libdns-export162_9.10.3.dfsg.P4-8ubuntu1.4_amd64.deb  404  Not Found [IP: 91.189.88.161 80]
+
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux-libc-dev_4.4.0-59.80_amd64.deb  404  Not Found [IP: 91.189.88.161 80]
+
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+root@d338b86de195:/nccu/ModelCode# apt-get install python-pip
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  binutils build-essential bzip2 cpp cpp-5 dpkg-dev fakeroot g++ g++-5 gcc gcc-5 ifupdown iproute2 isc-dhcp-client
+  isc-dhcp-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan2 libatm1
+  libatomic1 libc-dev-bin libc6-dev libcc1-0 libcilkrts5 libdns-export162 libdpkg-perl libexpat1-dev libfakeroot
+  libffi6 libfile-fcntllock-perl libgcc-5-dev libgdbm3 libgmp10 libgomp1 libisc-export160 libisl15 libitm1 liblsan0
+  libmnl0 libmpc3 libmpfr4 libmpx0 libperl5.22 libpython-all-dev libpython-dev libpython-stdlib libpython2.7
+  libpython2.7-dev libpython2.7-minimal libpython2.7-stdlib libquadmath0 libstdc++-5-dev libtsan0 libubsan0
+  libxtables11 linux-libc-dev make manpages manpages-dev netbase patch perl perl-modules-5.22 python python-all
+  python-all-dev python-dev python-minimal python-pip-whl python-pkg-resources python-setuptools python-wheel
+  python2.7 python2.7-dev python2.7-minimal rename xz-utils
+Suggested packages:
+  binutils-doc bzip2-doc cpp-doc gcc-5-locales debian-keyring g++-multilib g++-5-multilib gcc-5-doc libstdc++6-5-dbg
+  gcc-multilib autoconf automake libtool flex bison gdb gcc-doc gcc-5-multilib libgcc1-dbg libgomp1-dbg libitm1-dbg
+  libatomic1-dbg libasan2-dbg liblsan0-dbg libtsan0-dbg libubsan0-dbg libcilkrts5-dbg libmpx0-dbg libquadmath0-dbg
+  ppp rdnssd iproute2-doc resolvconf avahi-autoipd isc-dhcp-client-ddns apparmor glibc-doc libstdc++-5-doc make-doc
+  man-browser ed diffutils-doc perl-doc libterm-readline-gnu-perl | libterm-readline-perl-perl python-doc python-tk
+  python-setuptools-doc python2.7-doc binfmt-support
+The following NEW packages will be installed:
+  binutils build-essential bzip2 cpp cpp-5 dpkg-dev fakeroot g++ g++-5 gcc gcc-5 ifupdown iproute2 isc-dhcp-client
+  isc-dhcp-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan2 libatm1
+  libatomic1 libc-dev-bin libc6-dev libcc1-0 libcilkrts5 libdns-export162 libdpkg-perl libexpat1-dev libfakeroot
+  libffi6 libfile-fcntllock-perl libgcc-5-dev libgdbm3 libgmp10 libgomp1 libisc-export160 libisl15 libitm1 liblsan0
+  libmnl0 libmpc3 libmpfr4 libmpx0 libperl5.22 libpython-all-dev libpython-dev libpython-stdlib libpython2.7
+  libpython2.7-dev libpython2.7-minimal libpython2.7-stdlib libquadmath0 libstdc++-5-dev libtsan0 libubsan0
+  libxtables11 linux-libc-dev make manpages manpages-dev netbase patch perl perl-modules-5.22 python python-all
+  python-all-dev python-dev python-minimal python-pip python-pip-whl python-pkg-resources python-setuptools
+  python-wheel python2.7 python2.7-dev python2.7-minimal rename xz-utils
+0 upgraded, 79 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1645 kB/82.9 MB of archives.
+After this operation, 257 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Ign:1 http://archive.ubuntu.com/ubuntu xenial-security/main amd64 libisc-export160 amd64 1:9.10.3.dfsg.P4-8ubuntu1.4
+Ign:2 http://archive.ubuntu.com/ubuntu xenial-security/main amd64 libdns-export162 amd64 1:9.10.3.dfsg.P4-8ubuntu1.4
+Ign:3 http://archive.ubuntu.com/ubuntu xenial-security/main amd64 linux-libc-dev amd64 4.4.0-59.80
+Err:1 http://archive.ubuntu.com/ubuntu xenial-security/main amd64 libisc-export160 amd64 1:9.10.3.dfsg.P4-8ubuntu1.4
+  404  Not Found [IP: 91.189.88.152 80]
+Err:2 http://archive.ubuntu.com/ubuntu xenial-security/main amd64 libdns-export162 amd64 1:9.10.3.dfsg.P4-8ubuntu1.4
+  404  Not Found [IP: 91.189.88.152 80]
+Err:3 http://archive.ubuntu.com/ubuntu xenial-security/main amd64 linux-libc-dev amd64 4.4.0-59.80
+  404  Not Found [IP: 91.189.88.152 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/b/bind9/libisc-export160_9.10.3.dfsg.P4-8ubuntu1.4_amd64.deb  404  Not Found [IP: 91.189.88.152 80]
+
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/b/bind9/libdns-export162_9.10.3.dfsg.P4-8ubuntu1.4_amd64.deb  404  Not Found [IP: 91.189.88.152 80]
+
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux-libc-dev_4.4.0-59.80_amd64.deb  404  Not Found [IP: 91.189.88.152 80]
+
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+root@d338b86de195:/nccu/ModelCode# apt-get update            
+Hit:1 http://archive.ubuntu.com/ubuntu xenial InRelease
+Get:2 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial-security InRelease [102 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial-updates/main Sources [291 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-updates/restricted Sources [2815 B]
+Get:6 http://archive.ubuntu.com/ubuntu xenial-updates/universe Sources [163 kB]
+Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [604 kB]
+Get:8 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages [12.4 kB]
+Get:9 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [504 kB]
+Get:10 http://archive.ubuntu.com/ubuntu xenial-security/main Sources [72.1 kB]
+Get:11 http://archive.ubuntu.com/ubuntu xenial-security/restricted Sources [2392 B]
+Get:12 http://archive.ubuntu.com/ubuntu xenial-security/universe Sources [23.0 kB]
+Get:13 http://archive.ubuntu.com/ubuntu xenial-security/main amd64 Packages [268 kB]
+Get:14 http://archive.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages [12.0 kB]
+Get:15 http://archive.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [94.0 kB]
+Fetched 2252 kB in 3s (685 kB/s)                            
+Reading package lists... Done
+root@d338b86de195:/nccu/ModelCode# apt-get install python-pip
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  binutils build-essential bzip2 cpp cpp-5 dpkg-dev fakeroot g++ g++-5 gcc gcc-5 ifupdown iproute2 isc-dhcp-client
+  isc-dhcp-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan2 libatm1
+  libatomic1 libc-dev-bin libc6-dev libcc1-0 libcilkrts5 libdns-export162 libdpkg-perl libexpat1-dev libfakeroot
+  libffi6 libfile-fcntllock-perl libgcc-5-dev libgdbm3 libgmp10 libgomp1 libisc-export160 libisl15 libitm1 liblsan0
+  libmnl0 libmpc3 libmpfr4 libmpx0 libperl5.22 libpython-all-dev libpython-dev libpython-stdlib libpython2.7
+  libpython2.7-dev libpython2.7-minimal libpython2.7-stdlib libquadmath0 libstdc++-5-dev libtsan0 libubsan0
+  libxtables11 linux-libc-dev make manpages manpages-dev netbase patch perl perl-modules-5.22 python python-all
+  python-all-dev python-dev python-minimal python-pip-whl python-pkg-resources python-setuptools python-wheel
+  python2.7 python2.7-dev python2.7-minimal rename xz-utils
+Suggested packages:
+  binutils-doc bzip2-doc cpp-doc gcc-5-locales debian-keyring g++-multilib g++-5-multilib gcc-5-doc libstdc++6-5-dbg
+  gcc-multilib autoconf automake libtool flex bison gdb gcc-doc gcc-5-multilib libgcc1-dbg libgomp1-dbg libitm1-dbg
+  libatomic1-dbg libasan2-dbg liblsan0-dbg libtsan0-dbg libubsan0-dbg libcilkrts5-dbg libmpx0-dbg libquadmath0-dbg
+  ppp rdnssd iproute2-doc resolvconf avahi-autoipd isc-dhcp-client-ddns apparmor glibc-doc libstdc++-5-doc make-doc
+  man-browser ed diffutils-doc perl-doc libterm-readline-gnu-perl | libterm-readline-perl-perl python-doc python-tk
+  python-setuptools-doc python2.7-doc binfmt-support
+The following NEW packages will be installed:
+  binutils build-essential bzip2 cpp cpp-5 dpkg-dev fakeroot g++ g++-5 gcc gcc-5 ifupdown iproute2 isc-dhcp-client
+  isc-dhcp-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan2 libatm1
+  libatomic1 libc-dev-bin libc6-dev libcc1-0 libcilkrts5 libdns-export162 libdpkg-perl libexpat1-dev libfakeroot
+  libffi6 libfile-fcntllock-perl libgcc-5-dev libgdbm3 libgmp10 libgomp1 libisc-export160 libisl15 libitm1 liblsan0
+  libmnl0 libmpc3 libmpfr4 libmpx0 libperl5.22 libpython-all-dev libpython-dev libpython-stdlib libpython2.7
+  libpython2.7-dev libpython2.7-minimal libpython2.7-stdlib libquadmath0 libstdc++-5-dev libtsan0 libubsan0
+  libxtables11 linux-libc-dev make manpages manpages-dev netbase patch perl perl-modules-5.22 python python-all
+  python-all-dev python-dev python-minimal python-pip python-pip-whl python-pkg-resources python-setuptools
+  python-wheel python2.7 python2.7-dev python2.7-minimal rename xz-utils
+0 upgraded, 79 newly installed, 0 to remove and 14 not upgraded.
+Need to get 82.9 MB of archives.
+After this operation, 257 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 libatm1 amd64 1:2.5.1-1.5 [24.2 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmnl0 amd64 1.0.3-5 [12.0 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgdbm3 amd64 1.8.3-13.1 [16.9 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial/main amd64 perl-modules-5.22 all 5.22.1-9 [2641 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial/main amd64 libperl5.22 amd64 5.22.1-9 [3371 kB]
+Get:6 http://archive.ubuntu.com/ubuntu xenial/main amd64 perl amd64 5.22.1-9 [237 kB]
+Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7-minimal amd64 2.7.12-1ubuntu0~16.04.1 [339 kB]
+Get:8 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python2.7-minimal amd64 2.7.12-1ubuntu0~16.04.1 [1295 kB]
+Get:9 http://archive.ubuntu.com/ubuntu xenial/main amd64 python-minimal amd64 2.7.11-1 [28.2 kB]
+Get:10 http://archive.ubuntu.com/ubuntu xenial/main amd64 libffi6 amd64 3.2.1-4 [17.8 kB]
+Get:11 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7-stdlib amd64 2.7.12-1ubuntu0~16.04.1 [1884 kB]
+Get:12 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python2.7 amd64 2.7.12-1ubuntu0~16.04.1 [224 kB]
+Get:13 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpython-stdlib amd64 2.7.11-1 [7656 B]
+Get:14 http://archive.ubuntu.com/ubuntu xenial/main amd64 python amd64 2.7.11-1 [137 kB]
+Get:15 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgmp10 amd64 2:6.1.0+dfsg-2 [240 kB]
+Get:16 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmpfr4 amd64 3.1.4-1 [191 kB]
+Get:17 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmpc3 amd64 1.0.3-1 [39.7 kB]
+Get:18 http://archive.ubuntu.com/ubuntu xenial/main amd64 bzip2 amd64 1.0.6-8 [32.7 kB]
+Get:19 http://archive.ubuntu.com/ubuntu xenial/main amd64 iproute2 amd64 4.3.0-1ubuntu3 [522 kB]
+Get:20 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 ifupdown amd64 0.8.10ubuntu1.2 [54.9 kB]
+Get:21 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libisc-export160 amd64 1:9.10.3.dfsg.P4-8ubuntu1.5 [153 kB]
+Get:22 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdns-export162 amd64 1:9.10.3.dfsg.P4-8ubuntu1.5 [665 kB]
+Get:23 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 isc-dhcp-client amd64 4.3.3-5ubuntu12.6 [223 kB]
+Get:24 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 isc-dhcp-common amd64 4.3.3-5ubuntu12.6 [105 kB]
+Get:25 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxtables11 amd64 1.6.0-2ubuntu3 [27.2 kB]
+Get:26 http://archive.ubuntu.com/ubuntu xenial/main amd64 netbase all 5.3 [12.9 kB]
+Get:27 http://archive.ubuntu.com/ubuntu xenial/main amd64 manpages all 4.04-2 [1087 kB]
+Get:28 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 binutils amd64 2.26.1-1ubuntu1~16.04.3 [2310 kB]
+Get:29 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libc-dev-bin amd64 2.23-0ubuntu5 [68.7 kB]
+Get:30 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 linux-libc-dev amd64 4.4.0-63.84 [839 kB]
+Get:31 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libc6-dev amd64 2.23-0ubuntu5 [2078 kB]
+Get:32 http://archive.ubuntu.com/ubuntu xenial/main amd64 libisl15 amd64 0.16.1-1 [524 kB]                            
+Get:33 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 cpp-5 amd64 5.4.0-6ubuntu1~16.04.4 [7653 kB]        
+Get:34 http://archive.ubuntu.com/ubuntu xenial/main amd64 cpp amd64 4:5.3.1-1ubuntu1 [27.7 kB]                        
+Get:35 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcc1-0 amd64 5.4.0-6ubuntu1~16.04.4 [38.8 kB]     
+Get:36 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgomp1 amd64 5.4.0-6ubuntu1~16.04.4 [55.0 kB]     
+Get:37 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libitm1 amd64 5.4.0-6ubuntu1~16.04.4 [27.4 kB]      
+Get:38 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libatomic1 amd64 5.4.0-6ubuntu1~16.04.4 [8912 B]    
+Get:39 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libasan2 amd64 5.4.0-6ubuntu1~16.04.4 [264 kB]      
+Get:40 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 liblsan0 amd64 5.4.0-6ubuntu1~16.04.4 [105 kB]      
+Get:41 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtsan0 amd64 5.4.0-6ubuntu1~16.04.4 [244 kB]      
+Get:42 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libubsan0 amd64 5.4.0-6ubuntu1~16.04.4 [95.3 kB]    
+Get:43 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcilkrts5 amd64 5.4.0-6ubuntu1~16.04.4 [40.1 kB]  
+Get:44 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libmpx0 amd64 5.4.0-6ubuntu1~16.04.4 [9766 B]       
+Get:45 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libquadmath0 amd64 5.4.0-6ubuntu1~16.04.4 [131 kB]  
+Get:46 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgcc-5-dev amd64 5.4.0-6ubuntu1~16.04.4 [2237 kB] 
+Get:47 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 gcc-5 amd64 5.4.0-6ubuntu1~16.04.4 [8577 kB]        
+Get:48 http://archive.ubuntu.com/ubuntu xenial/main amd64 gcc amd64 4:5.3.1-1ubuntu1 [5244 B]                         
+Get:49 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libstdc++-5-dev amd64 5.4.0-6ubuntu1~16.04.4 [1426 kB]
+Get:50 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 g++-5 amd64 5.4.0-6ubuntu1~16.04.4 [8300 kB]        
+Get:51 http://archive.ubuntu.com/ubuntu xenial/main amd64 g++ amd64 4:5.3.1-1ubuntu1 [1504 B]                         
+Get:52 http://archive.ubuntu.com/ubuntu xenial/main amd64 make amd64 4.1-6 [151 kB]                                   
+Get:52 http://archive.ubuntu.com/ubuntu xenial/main amd64 make amd64 4.1-6 [151 kB]                                   
+Get:53 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdpkg-perl all 1.18.4ubuntu1.1 [195 kB]           
+Get:54 http://archive.ubuntu.com/ubuntu xenial/main amd64 xz-utils amd64 5.1.1alpha+20120614-2ubuntu2 [78.8 kB]       
+Get:55 http://archive.ubuntu.com/ubuntu xenial/main amd64 patch amd64 2.7.5-1 [90.4 kB]                               
+Get:56 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 dpkg-dev all 1.18.4ubuntu1.1 [584 kB]               
+Get:57 http://archive.ubuntu.com/ubuntu xenial/main amd64 build-essential amd64 12.1ubuntu2 [4758 B]                  
+Get:58 http://archive.ubuntu.com/ubuntu xenial/main amd64 libfakeroot amd64 1.20.2-1ubuntu1 [25.5 kB]                 
+Get:59 http://archive.ubuntu.com/ubuntu xenial/main amd64 fakeroot amd64 1.20.2-1ubuntu1 [61.8 kB]                    
+Get:60 http://archive.ubuntu.com/ubuntu xenial/main amd64 libalgorithm-diff-perl all 1.19.03-1 [47.6 kB]              
+Get:61 http://archive.ubuntu.com/ubuntu xenial/main amd64 libalgorithm-diff-xs-perl amd64 0.04-4build1 [11.0 kB]      
+Get:62 http://archive.ubuntu.com/ubuntu xenial/main amd64 libalgorithm-merge-perl all 0.08-3 [12.0 kB]                
+Get:63 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libexpat1-dev amd64 2.1.0-7ubuntu0.16.04.2 [115 kB] 
+Get:64 http://archive.ubuntu.com/ubuntu xenial/main amd64 libfile-fcntllock-perl amd64 0.22-3 [32.0 kB]               
+Get:65 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7 amd64 2.7.12-1ubuntu0~16.04.1 [1070 kB]
+Get:66 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7-dev amd64 2.7.12-1ubuntu0~16.04.1 [27.8 MB]
+Get:67 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpython-dev amd64 2.7.11-1 [7728 B]                       
+Get:68 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpython-all-dev amd64 2.7.11-1 [992 B]                    
+Get:69 http://archive.ubuntu.com/ubuntu xenial/main amd64 manpages-dev all 4.04-2 [2048 kB]                           
+Get:70 http://archive.ubuntu.com/ubuntu xenial/main amd64 python-all amd64 2.7.11-1 [978 B]                           
+Get:71 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python2.7-dev amd64 2.7.12-1ubuntu0~16.04.1 [276 kB]
+Get:71 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python2.7-dev amd64 2.7.12-1ubuntu0~16.04.1 [276 kB]
+Get:72 http://archive.ubuntu.com/ubuntu xenial/main amd64 python-dev amd64 2.7.11-1 [1160 B]                          
+Get:73 http://archive.ubuntu.com/ubuntu xenial/main amd64 python-all-dev amd64 2.7.11-1 [1000 B]                      
+Get:74 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 python-pip-whl all 8.1.1-2ubuntu0.4 [1110 kB]   
+Get:75 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 python-pip all 8.1.1-2ubuntu0.4 [144 kB]        
+Get:76 http://archive.ubuntu.com/ubuntu xenial/main amd64 python-pkg-resources all 20.7.0-1 [108 kB]                  
+Get:77 http://archive.ubuntu.com/ubuntu xenial/main amd64 python-setuptools all 20.7.0-1 [169 kB]                     
+Get:78 http://archive.ubuntu.com/ubuntu xenial/universe amd64 python-wheel all 0.29.0-1 [48.0 kB]                     
+Get:79 http://archive.ubuntu.com/ubuntu xenial/main amd64 rename all 0.20-4 [12.0 kB]                                 
+Fetched 82.7 MB in 3min 1s (456 kB/s)                                                                                 
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libatm1:amd64.
+(Reading database ... 11933 files and directories currently installed.)
+Preparing to unpack .../libatm1_1%3a2.5.1-1.5_amd64.deb ...
+Unpacking libatm1:amd64 (1:2.5.1-1.5) ...
+Selecting previously unselected package libmnl0:amd64.
+Preparing to unpack .../libmnl0_1.0.3-5_amd64.deb ...
+Unpacking libmnl0:amd64 (1.0.3-5) ...
+Selecting previously unselected package libgdbm3:amd64.
+Preparing to unpack .../libgdbm3_1.8.3-13.1_amd64.deb ...
+Unpacking libgdbm3:amd64 (1.8.3-13.1) ...
+Selecting previously unselected package perl-modules-5.22.
+Preparing to unpack .../perl-modules-5.22_5.22.1-9_all.deb ...
+Unpacking perl-modules-5.22 (5.22.1-9) ...
+Selecting previously unselected package libperl5.22:amd64.
+Preparing to unpack .../libperl5.22_5.22.1-9_amd64.deb ...
+Unpacking libperl5.22:amd64 (5.22.1-9) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../perl_5.22.1-9_amd64.deb ...
+Unpacking perl (5.22.1-9) ...
+Selecting previously unselected package libpython2.7-minimal:amd64.
+Preparing to unpack .../libpython2.7-minimal_2.7.12-1ubuntu0~16.04.1_amd64.deb ...
+Unpacking libpython2.7-minimal:amd64 (2.7.12-1ubuntu0~16.04.1) ...
+Selecting previously unselected package python2.7-minimal.
+Preparing to unpack .../python2.7-minimal_2.7.12-1ubuntu0~16.04.1_amd64.deb ...
+Unpacking python2.7-minimal (2.7.12-1ubuntu0~16.04.1) ...
+Selecting previously unselected package python-minimal.
+Preparing to unpack .../python-minimal_2.7.11-1_amd64.deb ...
+Unpacking python-minimal (2.7.11-1) ...
+Selecting previously unselected package libffi6:amd64.
+Preparing to unpack .../libffi6_3.2.1-4_amd64.deb ...
+Unpacking libffi6:amd64 (3.2.1-4) ...
+Selecting previously unselected package libpython2.7-stdlib:amd64.
+Preparing to unpack .../libpython2.7-stdlib_2.7.12-1ubuntu0~16.04.1_amd64.deb ...
+Unpacking libpython2.7-stdlib:amd64 (2.7.12-1ubuntu0~16.04.1) ...
+Selecting previously unselected package python2.7.
+Preparing to unpack .../python2.7_2.7.12-1ubuntu0~16.04.1_amd64.deb ...
+Unpacking python2.7 (2.7.12-1ubuntu0~16.04.1) ...
+Selecting previously unselected package libpython-stdlib:amd64.
+Preparing to unpack .../libpython-stdlib_2.7.11-1_amd64.deb ...
+Unpacking libpython-stdlib:amd64 (2.7.11-1) ...
+Processing triggers for libc-bin (2.23-0ubuntu5) ...
+Processing triggers for mime-support (3.59ubuntu1) ...
+Setting up libpython2.7-minimal:amd64 (2.7.12-1ubuntu0~16.04.1) ...
+Setting up python2.7-minimal (2.7.12-1ubuntu0~16.04.1) ...
+Linking and byte-compiling packages for runtime python2.7...
+Setting up python-minimal (2.7.11-1) ...
+Selecting previously unselected package python.
+(Reading database ... 14470 files and directories currently installed.)
+Preparing to unpack .../python_2.7.11-1_amd64.deb ...
+Unpacking python (2.7.11-1) ...
+Selecting previously unselected package libgmp10:amd64.
+Preparing to unpack .../libgmp10_2%3a6.1.0+dfsg-2_amd64.deb ...
+Unpacking libgmp10:amd64 (2:6.1.0+dfsg-2) ...
+Selecting previously unselected package libmpfr4:amd64.
+Preparing to unpack .../libmpfr4_3.1.4-1_amd64.deb ...
+Unpacking libmpfr4:amd64 (3.1.4-1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../libmpc3_1.0.3-1_amd64.deb ...
+Unpacking libmpc3:amd64 (1.0.3-1) ...
+Selecting previously unselected package bzip2.
+Preparing to unpack .../bzip2_1.0.6-8_amd64.deb ...
+Unpacking bzip2 (1.0.6-8) ...
+Selecting previously unselected package iproute2.
+Preparing to unpack .../iproute2_4.3.0-1ubuntu3_amd64.deb ...
+Unpacking iproute2 (4.3.0-1ubuntu3) ...
+Selecting previously unselected package ifupdown.
+Preparing to unpack .../ifupdown_0.8.10ubuntu1.2_amd64.deb ...
+Unpacking ifupdown (0.8.10ubuntu1.2) ...
+Selecting previously unselected package libisc-export160.
+Preparing to unpack .../libisc-export160_1%3a9.10.3.dfsg.P4-8ubuntu1.5_amd64.deb ...
+Unpacking libisc-export160 (1:9.10.3.dfsg.P4-8ubuntu1.5) ...
+Selecting previously unselected package libdns-export162.
+Preparing to unpack .../libdns-export162_1%3a9.10.3.dfsg.P4-8ubuntu1.5_amd64.deb ...
+Unpacking libdns-export162 (1:9.10.3.dfsg.P4-8ubuntu1.5) ...
+Selecting previously unselected package isc-dhcp-client.
+Preparing to unpack .../isc-dhcp-client_4.3.3-5ubuntu12.6_amd64.deb ...
+Unpacking isc-dhcp-client (4.3.3-5ubuntu12.6) ...
+Selecting previously unselected package isc-dhcp-common.
+Preparing to unpack .../isc-dhcp-common_4.3.3-5ubuntu12.6_amd64.deb ...
+Unpacking isc-dhcp-common (4.3.3-5ubuntu12.6) ...
+Selecting previously unselected package libxtables11:amd64.
+Preparing to unpack .../libxtables11_1.6.0-2ubuntu3_amd64.deb ...
+Unpacking libxtables11:amd64 (1.6.0-2ubuntu3) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../archives/netbase_5.3_all.deb ...
+Unpacking netbase (5.3) ...
+Selecting previously unselected package manpages.
+Preparing to unpack .../manpages_4.04-2_all.deb ...
+Unpacking manpages (4.04-2) ...
+Selecting previously unselected package binutils.
+Preparing to unpack .../binutils_2.26.1-1ubuntu1~16.04.3_amd64.deb ...
+Unpacking binutils (2.26.1-1ubuntu1~16.04.3) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../libc-dev-bin_2.23-0ubuntu5_amd64.deb ...
+Unpacking libc-dev-bin (2.23-0ubuntu5) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../linux-libc-dev_4.4.0-63.84_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (4.4.0-63.84) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../libc6-dev_2.23-0ubuntu5_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.23-0ubuntu5) ...
+Selecting previously unselected package libisl15:amd64.
+Preparing to unpack .../libisl15_0.16.1-1_amd64.deb ...
+Unpacking libisl15:amd64 (0.16.1-1) ...
+Selecting previously unselected package cpp-5.
+Preparing to unpack .../cpp-5_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking cpp-5 (5.4.0-6ubuntu1~16.04.4) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../cpp_4%3a5.3.1-1ubuntu1_amd64.deb ...
+Unpacking cpp (4:5.3.1-1ubuntu1) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../libcc1-0_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking libcc1-0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../libgomp1_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking libgomp1:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../libitm1_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking libitm1:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../libatomic1_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking libatomic1:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Selecting previously unselected package libasan2:amd64.
+Preparing to unpack .../libasan2_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking libasan2:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../liblsan0_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking liblsan0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Selecting previously unselected package libtsan0:amd64.
+Preparing to unpack .../libtsan0_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking libtsan0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Selecting previously unselected package libubsan0:amd64.
+Preparing to unpack .../libubsan0_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking libubsan0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Selecting previously unselected package libcilkrts5:amd64.
+Preparing to unpack .../libcilkrts5_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking libcilkrts5:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Selecting previously unselected package libmpx0:amd64.
+Preparing to unpack .../libmpx0_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking libmpx0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../libquadmath0_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking libquadmath0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Selecting previously unselected package libgcc-5-dev:amd64.
+Preparing to unpack .../libgcc-5-dev_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking libgcc-5-dev:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Selecting previously unselected package gcc-5.
+Preparing to unpack .../gcc-5_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking gcc-5 (5.4.0-6ubuntu1~16.04.4) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../gcc_4%3a5.3.1-1ubuntu1_amd64.deb ...
+Unpacking gcc (4:5.3.1-1ubuntu1) ...
+Selecting previously unselected package libstdc++-5-dev:amd64.
+Preparing to unpack .../libstdc++-5-dev_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking libstdc++-5-dev:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Selecting previously unselected package g++-5.
+Preparing to unpack .../g++-5_5.4.0-6ubuntu1~16.04.4_amd64.deb ...
+Unpacking g++-5 (5.4.0-6ubuntu1~16.04.4) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../g++_4%3a5.3.1-1ubuntu1_amd64.deb ...
+Unpacking g++ (4:5.3.1-1ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../archives/make_4.1-6_amd64.deb ...
+Unpacking make (4.1-6) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../libdpkg-perl_1.18.4ubuntu1.1_all.deb ...
+Unpacking libdpkg-perl (1.18.4ubuntu1.1) ...
+Selecting previously unselected package xz-utils.
+Preparing to unpack .../xz-utils_5.1.1alpha+20120614-2ubuntu2_amd64.deb ...
+Unpacking xz-utils (5.1.1alpha+20120614-2ubuntu2) ...
+Selecting previously unselected package patch.
+Preparing to unpack .../patch_2.7.5-1_amd64.deb ...
+Unpacking patch (2.7.5-1) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../dpkg-dev_1.18.4ubuntu1.1_all.deb ...
+Unpacking dpkg-dev (1.18.4ubuntu1.1) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../build-essential_12.1ubuntu2_amd64.deb ...
+Unpacking build-essential (12.1ubuntu2) ...
+Selecting previously unselected package libfakeroot:amd64.
+Preparing to unpack .../libfakeroot_1.20.2-1ubuntu1_amd64.deb ...
+Unpacking libfakeroot:amd64 (1.20.2-1ubuntu1) ...
+Selecting previously unselected package fakeroot.
+Preparing to unpack .../fakeroot_1.20.2-1ubuntu1_amd64.deb ...
+Unpacking fakeroot (1.20.2-1ubuntu1) ...
+Selecting previously unselected package libalgorithm-diff-perl.
+Preparing to unpack .../libalgorithm-diff-perl_1.19.03-1_all.deb ...
+Unpacking libalgorithm-diff-perl (1.19.03-1) ...
+Selecting previously unselected package libalgorithm-diff-xs-perl.
+Preparing to unpack .../libalgorithm-diff-xs-perl_0.04-4build1_amd64.deb ...
+Unpacking libalgorithm-diff-xs-perl (0.04-4build1) ...
+Selecting previously unselected package libalgorithm-merge-perl.
+Preparing to unpack .../libalgorithm-merge-perl_0.08-3_all.deb ...
+Unpacking libalgorithm-merge-perl (0.08-3) ...
+Selecting previously unselected package libexpat1-dev:amd64.
+Preparing to unpack .../libexpat1-dev_2.1.0-7ubuntu0.16.04.2_amd64.deb ...
+Unpacking libexpat1-dev:amd64 (2.1.0-7ubuntu0.16.04.2) ...
+Selecting previously unselected package libfile-fcntllock-perl.
+Preparing to unpack .../libfile-fcntllock-perl_0.22-3_amd64.deb ...
+Unpacking libfile-fcntllock-perl (0.22-3) ...
+Selecting previously unselected package libpython2.7:amd64.
+Preparing to unpack .../libpython2.7_2.7.12-1ubuntu0~16.04.1_amd64.deb ...
+Unpacking libpython2.7:amd64 (2.7.12-1ubuntu0~16.04.1) ...
+Selecting previously unselected package libpython2.7-dev:amd64.
+Preparing to unpack .../libpython2.7-dev_2.7.12-1ubuntu0~16.04.1_amd64.deb ...
+Unpacking libpython2.7-dev:amd64 (2.7.12-1ubuntu0~16.04.1) ...
+Selecting previously unselected package libpython-dev:amd64.
+Preparing to unpack .../libpython-dev_2.7.11-1_amd64.deb ...
+Unpacking libpython-dev:amd64 (2.7.11-1) ...
+Selecting previously unselected package libpython-all-dev:amd64.
+Preparing to unpack .../libpython-all-dev_2.7.11-1_amd64.deb ...
+Unpacking libpython-all-dev:amd64 (2.7.11-1) ...
+Selecting previously unselected package manpages-dev.
+Preparing to unpack .../manpages-dev_4.04-2_all.deb ...
+Unpacking manpages-dev (4.04-2) ...
+Selecting previously unselected package python-all.
+Preparing to unpack .../python-all_2.7.11-1_amd64.deb ...
+Unpacking python-all (2.7.11-1) ...
+Selecting previously unselected package python2.7-dev.
+Preparing to unpack .../python2.7-dev_2.7.12-1ubuntu0~16.04.1_amd64.deb ...
+Unpacking python2.7-dev (2.7.12-1ubuntu0~16.04.1) ...
+Selecting previously unselected package python-dev.
+Preparing to unpack .../python-dev_2.7.11-1_amd64.deb ...
+Unpacking python-dev (2.7.11-1) ...
+Selecting previously unselected package python-all-dev.
+Preparing to unpack .../python-all-dev_2.7.11-1_amd64.deb ...
+Unpacking python-all-dev (2.7.11-1) ...
+Selecting previously unselected package python-pip-whl.
+Preparing to unpack .../python-pip-whl_8.1.1-2ubuntu0.4_all.deb ...
+Unpacking python-pip-whl (8.1.1-2ubuntu0.4) ...
+Selecting previously unselected package python-pip.
+Preparing to unpack .../python-pip_8.1.1-2ubuntu0.4_all.deb ...
+Unpacking python-pip (8.1.1-2ubuntu0.4) ...
+Selecting previously unselected package python-pkg-resources.
+Preparing to unpack .../python-pkg-resources_20.7.0-1_all.deb ...
+Unpacking python-pkg-resources (20.7.0-1) ...
+Selecting previously unselected package python-setuptools.
+Preparing to unpack .../python-setuptools_20.7.0-1_all.deb ...
+Unpacking python-setuptools (20.7.0-1) ...
+Selecting previously unselected package python-wheel.
+Preparing to unpack .../python-wheel_0.29.0-1_all.deb ...
+Unpacking python-wheel (0.29.0-1) ...
+Selecting previously unselected package rename.
+Preparing to unpack .../archives/rename_0.20-4_all.deb ...
+Unpacking rename (0.20-4) ...
+Processing triggers for libc-bin (2.23-0ubuntu5) ...
+Processing triggers for systemd (229-4ubuntu13) ...
+Setting up libatm1:amd64 (1:2.5.1-1.5) ...
+Setting up libmnl0:amd64 (1.0.3-5) ...
+Setting up libgdbm3:amd64 (1.8.3-13.1) ...
+Setting up perl-modules-5.22 (5.22.1-9) ...
+Setting up libperl5.22:amd64 (5.22.1-9) ...
+Setting up perl (5.22.1-9) ...
+update-alternatives: using /usr/bin/prename to provide /usr/bin/rename (rename) in auto mode
+Setting up libffi6:amd64 (3.2.1-4) ...
+Setting up libpython2.7-stdlib:amd64 (2.7.12-1ubuntu0~16.04.1) ...
+Setting up python2.7 (2.7.12-1ubuntu0~16.04.1) ...
+Setting up libpython-stdlib:amd64 (2.7.11-1) ...
+Setting up python (2.7.11-1) ...
+Setting up libgmp10:amd64 (2:6.1.0+dfsg-2) ...
+Setting up libmpfr4:amd64 (3.1.4-1) ...
+Setting up libmpc3:amd64 (1.0.3-1) ...
+Setting up bzip2 (1.0.6-8) ...
+Setting up iproute2 (4.3.0-1ubuntu3) ...
+Setting up ifupdown (0.8.10ubuntu1.2) ...
+Creating /etc/network/interfaces.
+Setting up libisc-export160 (1:9.10.3.dfsg.P4-8ubuntu1.5) ...
+Setting up libdns-export162 (1:9.10.3.dfsg.P4-8ubuntu1.5) ...
+Setting up isc-dhcp-client (4.3.3-5ubuntu12.6) ...
+Setting up isc-dhcp-common (4.3.3-5ubuntu12.6) ...
+Setting up libxtables11:amd64 (1.6.0-2ubuntu3) ...
+Setting up netbase (5.3) ...
+Setting up manpages (4.04-2) ...
+Setting up binutils (2.26.1-1ubuntu1~16.04.3) ...
+Setting up libc-dev-bin (2.23-0ubuntu5) ...
+Setting up linux-libc-dev:amd64 (4.4.0-63.84) ...
+Setting up libc6-dev:amd64 (2.23-0ubuntu5) ...
+Setting up libisl15:amd64 (0.16.1-1) ...
+Setting up cpp-5 (5.4.0-6ubuntu1~16.04.4) ...
+Setting up cpp (4:5.3.1-1ubuntu1) ...
+Setting up libcc1-0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Setting up libgomp1:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Setting up libitm1:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Setting up libatomic1:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Setting up libasan2:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Setting up liblsan0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Setting up libtsan0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Setting up libubsan0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Setting up libcilkrts5:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Setting up libmpx0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Setting up libquadmath0:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Setting up libgcc-5-dev:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Setting up gcc-5 (5.4.0-6ubuntu1~16.04.4) ...
+Setting up gcc (4:5.3.1-1ubuntu1) ...
+Setting up libstdc++-5-dev:amd64 (5.4.0-6ubuntu1~16.04.4) ...
+Setting up g++-5 (5.4.0-6ubuntu1~16.04.4) ...
+Setting up g++ (4:5.3.1-1ubuntu1) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Setting up make (4.1-6) ...
+Setting up libdpkg-perl (1.18.4ubuntu1.1) ...
+Setting up xz-utils (5.1.1alpha+20120614-2ubuntu2) ...
+update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
+Setting up patch (2.7.5-1) ...
+Setting up dpkg-dev (1.18.4ubuntu1.1) ...
+Setting up build-essential (12.1ubuntu2) ...
+Setting up libfakeroot:amd64 (1.20.2-1ubuntu1) ...
+Setting up fakeroot (1.20.2-1ubuntu1) ...
+update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode
+Setting up libalgorithm-diff-perl (1.19.03-1) ...
+Setting up libalgorithm-diff-xs-perl (0.04-4build1) ...
+Setting up libalgorithm-merge-perl (0.08-3) ...
+Setting up libexpat1-dev:amd64 (2.1.0-7ubuntu0.16.04.2) ...
+Setting up libfile-fcntllock-perl (0.22-3) ...
+Setting up libpython2.7:amd64 (2.7.12-1ubuntu0~16.04.1) ...
+Setting up libpython2.7-dev:amd64 (2.7.12-1ubuntu0~16.04.1) ...
+Setting up libpython-dev:amd64 (2.7.11-1) ...
+Setting up libpython-all-dev:amd64 (2.7.11-1) ...
+Setting up manpages-dev (4.04-2) ...
+Setting up python-all (2.7.11-1) ...
+Setting up python2.7-dev (2.7.12-1ubuntu0~16.04.1) ...
+Setting up python-dev (2.7.11-1) ...
+Setting up python-all-dev (2.7.11-1) ...
+Setting up python-pip-whl (8.1.1-2ubuntu0.4) ...
+Setting up python-pip (8.1.1-2ubuntu0.4) ...
+Setting up python-pkg-resources (20.7.0-1) ...
+Setting up python-setuptools (20.7.0-1) ...
+Setting up python-wheel (0.29.0-1) ...
+Setting up rename (0.20-4) ...
+update-alternatives: using /usr/bin/file-rename to provide /usr/bin/rename (rename) in auto mode
+Processing triggers for libc-bin (2.23-0ubuntu5) ...
+Processing triggers for systemd (229-4ubuntu13) ...
+root@d338b86de195:/nccu/ModelCode# pip install requests
+Collecting requests
+  Downloading requests-2.13.0-py2.py3-none-any.whl (584kB)
+    100% |################################| 593kB 1.8MB/s 
+Installing collected packages: requests
+Successfully installed requests-2.13.0
+You are using pip version 8.1.1, however version 9.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+root@d338b86de195:/nccu/ModelCode# pip install --upgrade pip
+Collecting pip
+  Downloading pip-9.0.1-py2.py3-none-any.whl (1.3MB)
+    100% |################################| 1.3MB 1.0MB/s 
+Installing collected packages: pip
+  Found existing installation: pip 8.1.1
+    Not uninstalling pip at /usr/lib/python2.7/dist-packages, outside environment /usr
+Successfully installed pip-9.0.1
+root@d338b86de195:/nccu/ModelCode# pip install requests     
+Requirement already satisfied: requests in /usr/local/lib/python2.7/dist-packages
+root@d338b86de195:/nccu/ModelCode# apt-get install python-mysqldb
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libmysqlclient20 mysql-common
+Suggested packages:
+  mysql-server python-egenix-mxdatetime python-mysqldb-dbg
+The following NEW packages will be installed:
+  libmysqlclient20 mysql-common python-mysqldb
+0 upgraded, 3 newly installed, 0 to remove and 14 not upgraded.
+Need to get 866 kB of archives.
+After this operation, 4784 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 mysql-common all 5.7.17-0ubuntu0.16.04.1 [15.1 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libmysqlclient20 amd64 5.7.17-0ubuntu0.16.04.1 [809 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial/main amd64 python-mysqldb amd64 1.3.7-1build2 [42.4 kB]                 
+Fetched 866 kB in 14s (60.5 kB/s)                                                                                     
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package mysql-common.
+(Reading database ... 20664 files and directories currently installed.)
+Preparing to unpack .../mysql-common_5.7.17-0ubuntu0.16.04.1_all.deb ...
+Unpacking mysql-common (5.7.17-0ubuntu0.16.04.1) ...
+Selecting previously unselected package libmysqlclient20:amd64.
+Preparing to unpack .../libmysqlclient20_5.7.17-0ubuntu0.16.04.1_amd64.deb ...
+Unpacking libmysqlclient20:amd64 (5.7.17-0ubuntu0.16.04.1) ...
+Selecting previously unselected package python-mysqldb.
+Preparing to unpack .../python-mysqldb_1.3.7-1build2_amd64.deb ...
+Unpacking python-mysqldb (1.3.7-1build2) ...
+Processing triggers for libc-bin (2.23-0ubuntu5) ...
+Setting up mysql-common (5.7.17-0ubuntu0.16.04.1) ...
+update-alternatives: using /etc/mysql/my.cnf.fallback to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Setting up libmysqlclient20:amd64 (5.7.17-0ubuntu0.16.04.1) ...
+Setting up python-mysqldb (1.3.7-1build2) ...
+Processing triggers for libc-bin (2.23-0ubuntu5) ...
+root@d338b86de195:/nccu/ModelCode# pip install apscheduler
+Collecting apscheduler
+  Downloading APScheduler-3.3.1-py2.py3-none-any.whl (56kB)
+    100% |################################| 61kB 471kB/s 
+Collecting tzlocal>=1.2 (from apscheduler)
+  Downloading tzlocal-1.3.tar.gz
+Collecting funcsigs; python_version == "2.7" (from apscheduler)
+  Downloading funcsigs-1.0.2-py2.py3-none-any.whl
+Collecting six>=1.4.0 (from apscheduler)
+  Downloading six-1.10.0-py2.py3-none-any.whl
+Collecting pytz (from apscheduler)
+  Downloading pytz-2016.10-py2.py3-none-any.whl (483kB)
+    100% |################################| 491kB 2.8MB/s 
+Requirement already satisfied: setuptools>=0.7 in /usr/lib/python2.7/dist-packages (from apscheduler)
+Collecting futures; python_version == "2.7" (from apscheduler)
+  Downloading futures-3.0.5-py2-none-any.whl
+Building wheels for collected packages: tzlocal
+  Running setup.py bdist_wheel for tzlocal ... done
+  Stored in directory: /root/.cache/pip/wheels/80/19/a8/635ad9f4ad8a63b49d073c55cbca31fb5898ce2560ed145a69
+Successfully built tzlocal
+Installing collected packages: pytz, tzlocal, funcsigs, six, futures, apscheduler
+Successfully installed apscheduler-3.3.1 funcsigs-1.0.2 futures-3.0.5 pytz-2016.10 six-1.10.0 tzlocal-1.3
+root@d338b86de195:/nccu/ModelCode# ls
+FileToList.py     cloud.sh            merge.py                prepareFile        upload.py
+FileToList.pyc    cloud_scheduler.py  news                    scheduler_test.py  upload_history.py
+GetFilePaths.py   financeReport       newsPNV                 stockID_Name.txt   upload_price.py
+GetFilePaths.pyc  google-crawler.py   openfire_4.0.3_all.deb  stockReturn        web
+ID.csv            merge               predict.py              stock_price        xampp-linux-x64-7.0.9-1-installer.run
+root@d338b86de195:/nccu/ModelCode# sudo chmod +x xampp-linux-x64-7.0.9-1-installer.run
+bash: sudo: command not found
+root@d338b86de195:/nccu/ModelCode# chmod +x xampp-linux-x64-7.0.9-1-installer.run     
+root@d338b86de195:/nccu/ModelCode# ./xampp-linux-x64-7.0.9-1-installer.run
+----------------------------------------------------------------------------
+Welcome to the XAMPP Setup Wizard.
+
+----------------------------------------------------------------------------
+Select the components you want to install; clear the components you do not want 
+to install. Click Next when you are ready to continue.
+
+XAMPP Core Files : Y (Cannot be edited)
+
+XAMPP Developer Files [Y/n] :Y
+
+Is the selection above correct? [Y/n]: Y
+
+----------------------------------------------------------------------------
+Installation Directory
+
+XAMPP will be installed to /opt/lampp
+Press [Enter] to continue:
+
+----------------------------------------------------------------------------
+Setup is now ready to begin installing XAMPP on your computer.
+
+Do you want to continue? [Y/n]: Y
+
+----------------------------------------------------------------------------
+Please wait while Setup installs XAMPP on your computer.
+
+ Installing
+ 0% ______________ 50% ______________ 100%
+ #########################################
+
+----------------------------------------------------------------------------
+Setup has finished installing XAMPP on your computer.
+
+root@d338b86de195:/nccu/ModelCode# dpkg --install openfire_4.0.3_all.deb
+Selecting previously unselected package openfire.
+dpkg: regarding openfire_4.0.3_all.deb containing openfire, pre-dependency problem:
+ openfire pre-depends on default-jre-headless (>= 1.7)
+  default-jre-headless is not installed.
+
+dpkg: error processing archive openfire_4.0.3_all.deb (--install):
+ pre-dependency problem - not installing openfire
+Errors were encountered while processing:
+ openfire_4.0.3_all.deb
+root@d338b86de195:/nccu/ModelCode# apt-get default-jre                  
+E: Invalid operation default-jre
+root@d338b86de195:/nccu/ModelCode# apt-get -install default-jre
+E: Command line option 'i' [from -install] is not understood in combination with the other options.
+root@d338b86de195:/nccu/ModelCode# apt-get --install default-jre
+E: Command line option --install is not understood in combination with the other options
+root@d338b86de195:/nccu/ModelCode# apt-get install default-jre  
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  ca-certificates-java dbus dbus-x11 default-jre-headless fontconfig fontconfig-config fonts-dejavu-core
+  fonts-dejavu-extra gconf-service gconf-service-backend gconf2 gconf2-common hicolor-icon-theme java-common
+  libasn1-8-heimdal libasound2 libasound2-data libasyncns0 libatk1.0-0 libatk1.0-data libavahi-client3
+  libavahi-common-data libavahi-common3 libavahi-glib1 libbonobo2-0 libbonobo2-common libcairo2 libcanberra0
+  libcap-ng0 libcups2 libdatrie1 libdbus-1-3 libdbus-glib-1-2 libdrm-amdgpu1 libdrm-intel1 libdrm-nouveau2
+  libdrm-radeon1 libdrm2 libelf1 libflac8 libfontconfig1 libfreetype6 libgconf-2-4 libgdk-pixbuf2.0-0
+  libgdk-pixbuf2.0-common libgif7 libgl1-mesa-dri libgl1-mesa-glx libglapi-mesa libglib2.0-0 libglib2.0-data
+  libgnome-2-0 libgnome2-common libgnomevfs2-0 libgnomevfs2-common libgnutls30 libgraphite2-3 libgssapi3-heimdal
+  libgtk2.0-0 libgtk2.0-bin libgtk2.0-common libharfbuzz0b libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhogweed4 libhx509-5-heimdal libicu55 libjbig0 libjpeg-turbo8 libjpeg8 libjson-c2
+  libkrb5-26-heimdal liblcms2-2 libldap-2.4-2 libllvm3.8 libltdl7 libnettle6 libnspr4 libnss3 libnss3-nssdb libogg0
+  liborbit-2-0 libp11-kit0 libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0 libpciaccess0 libpcsclite1
+  libpixman-1-0 libpng12-0 libpopt0 libpulse0 libroken18-heimdal libsasl2-2 libsasl2-modules libsasl2-modules-db
+  libsndfile1 libtasn1-6 libtdb1 libthai-data libthai0 libtiff5 libtxc-dxtn-s2tc0 libvorbis0a libvorbisenc2
+  libvorbisfile3 libwind0-heimdal libx11-xcb1 libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0 libxcb-present0 libxcb-render0
+  libxcb-shm0 libxcb-sync1 libxcomposite1 libxcursor1 libxdamage1 libxfixes3 libxi6 libxinerama1 libxml2 libxrandr2
+  libxrender1 libxshmfence1 libxtst6 libxxf86vm1 openjdk-8-jre openjdk-8-jre-headless psmisc sgml-base
+  shared-mime-info sound-theme-freedesktop ucf x11-common xdg-user-dirs xml-core
+Suggested packages:
+  default-java-plugin gconf-defaults-service libasound2-plugins alsa-utils libbonobo2-bin libcanberra-gtk0
+  libcanberra-pulse cups-common desktop-base libgnomevfs2-bin libgnomevfs2-extra gamin | fam gnome-mime-data
+  gnutls-bin librsvg2-common gvfs liblcms2-utils pciutils pcscd pulseaudio libsasl2-modules-otp libsasl2-modules-ldap
+  libsasl2-modules-sql libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal icedtea-8-plugin
+  openjdk-8-jre-jamvm libnss-mdns fonts-ipafont-gothic fonts-ipafont-mincho ttf-wqy-microhei | ttf-wqy-zenhei
+  fonts-indic sgml-base-doc debhelper
+The following NEW packages will be installed:
+  ca-certificates-java dbus dbus-x11 default-jre default-jre-headless fontconfig fontconfig-config fonts-dejavu-core
+  fonts-dejavu-extra gconf-service gconf-service-backend gconf2 gconf2-common hicolor-icon-theme java-common
+  libasn1-8-heimdal libasound2 libasound2-data libasyncns0 libatk1.0-0 libatk1.0-data libavahi-client3
+  libavahi-common-data libavahi-common3 libavahi-glib1 libbonobo2-0 libbonobo2-common libcairo2 libcanberra0
+  libcap-ng0 libcups2 libdatrie1 libdbus-1-3 libdbus-glib-1-2 libdrm-amdgpu1 libdrm-intel1 libdrm-nouveau2
+  libdrm-radeon1 libdrm2 libelf1 libflac8 libfontconfig1 libfreetype6 libgconf-2-4 libgdk-pixbuf2.0-0
+  libgdk-pixbuf2.0-common libgif7 libgl1-mesa-dri libgl1-mesa-glx libglapi-mesa libglib2.0-0 libglib2.0-data
+  libgnome-2-0 libgnome2-common libgnomevfs2-0 libgnomevfs2-common libgnutls30 libgraphite2-3 libgssapi3-heimdal
+  libgtk2.0-0 libgtk2.0-bin libgtk2.0-common libharfbuzz0b libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhogweed4 libhx509-5-heimdal libicu55 libjbig0 libjpeg-turbo8 libjpeg8 libjson-c2
+  libkrb5-26-heimdal liblcms2-2 libldap-2.4-2 libllvm3.8 libltdl7 libnettle6 libnspr4 libnss3 libnss3-nssdb libogg0
+  liborbit-2-0 libp11-kit0 libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0 libpciaccess0 libpcsclite1
+  libpixman-1-0 libpng12-0 libpopt0 libpulse0 libroken18-heimdal libsasl2-2 libsasl2-modules libsasl2-modules-db
+  libsndfile1 libtasn1-6 libtdb1 libthai-data libthai0 libtiff5 libtxc-dxtn-s2tc0 libvorbis0a libvorbisenc2
+  libvorbisfile3 libwind0-heimdal libx11-xcb1 libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0 libxcb-present0 libxcb-render0
+  libxcb-shm0 libxcb-sync1 libxcomposite1 libxcursor1 libxdamage1 libxfixes3 libxi6 libxinerama1 libxml2 libxrandr2
+  libxrender1 libxshmfence1 libxtst6 libxxf86vm1 openjdk-8-jre openjdk-8-jre-headless psmisc sgml-base
+  shared-mime-info sound-theme-freedesktop ucf x11-common xdg-user-dirs xml-core
+0 upgraded, 139 newly installed, 0 to remove and 14 not upgraded.
+Need to get 66.7 MB of archives.
+After this operation, 352 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 libjson-c2 amd64 0.11-4ubuntu2 [22.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpopt0 amd64 1.16-10 [26.0 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial/main amd64 sgml-base all 1.26+nmu4ubuntu1 [12.5 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial/main amd64 fonts-dejavu-core all 2.35-1 [1039 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial/main amd64 ucf all 3.0036 [52.9 kB]
+Get:6 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 fontconfig-config all 2.11.94-0ubuntu1.1 [49.9 kB]
+Get:7 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpng12-0 amd64 1.2.54-1ubuntu1 [116 kB]
+Get:8 http://archive.ubuntu.com/ubuntu xenial/main amd64 libfreetype6 amd64 2.6.1-0.1ubuntu2 [316 kB]
+Get:9 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libfontconfig1 amd64 2.11.94-0ubuntu1.1 [131 kB]
+Get:10 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 fontconfig amd64 2.11.94-0ubuntu1.1 [178 kB]
+Get:11 http://archive.ubuntu.com/ubuntu xenial/main amd64 libasyncns0 amd64 0.8-5build1 [12.3 kB]
+Get:12 http://archive.ubuntu.com/ubuntu xenial/main amd64 libbonobo2-common all 2.32.1-3 [34.7 kB]
+Get:13 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libglib2.0-0 amd64 2.48.2-0ubuntu1 [1119 kB]
+Get:14 http://archive.ubuntu.com/ubuntu xenial/main amd64 liborbit-2-0 amd64 1:2.14.19-1build1 [140 kB]
+Get:15 http://archive.ubuntu.com/ubuntu xenial/main amd64 libicu55 amd64 55.1-7 [7643 kB]
+Get:16 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libxml2 amd64 2.9.3+dfsg1-1ubuntu0.1 [696 kB]
+Get:17 http://archive.ubuntu.com/ubuntu xenial/main amd64 libbonobo2-0 amd64 2.32.1-3 [211 kB]
+Get:18 http://archive.ubuntu.com/ubuntu xenial/main amd64 libjpeg-turbo8 amd64 1.4.2-0ubuntu3 [111 kB]
+Get:19 http://archive.ubuntu.com/ubuntu xenial/main amd64 liblcms2-2 amd64 2.6-3ubuntu2 [137 kB]
+Get:20 http://archive.ubuntu.com/ubuntu xenial/main amd64 libogg0 amd64 1.3.2-1 [17.2 kB]
+Get:21 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxcomposite1 amd64 1:0.4.4-1 [7714 B]
+Get:22 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxfixes3 amd64 1:5.0.1-2 [11.1 kB]
+Get:23 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxrender1 amd64 1:0.9.9-0ubuntu1 [18.5 kB]
+Get:24 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxcursor1 amd64 1:1.1.14-1 [22.8 kB]
+Get:25 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxdamage1 amd64 1:1.1.4-2 [6946 B]
+Get:26 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxinerama1 amd64 2:1.1.3-1 [7908 B]
+Get:27 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxshmfence1 amd64 1.2-1 [5042 B]
+Get:28 http://archive.ubuntu.com/ubuntu xenial/main amd64 x11-common all 1:7.7+13ubuntu3 [22.4 kB]
+Get:29 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxtst6 amd64 2:1.2.2-1 [14.1 kB]
+Get:30 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxxf86vm1 amd64 1:1.1.4-1 [10.6 kB]
+Get:31 http://archive.ubuntu.com/ubuntu xenial/main amd64 java-common all 0.56ubuntu2 [7742 B]
+Get:32 http://archive.ubuntu.com/ubuntu xenial/main amd64 default-jre-headless amd64 2:1.8-56ubuntu2 [4380 B]
+Get:33 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libnspr4 amd64 2:4.12-0ubuntu0.16.04.1 [112 kB]
+Get:34 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libnss3-nssdb all 2:3.26.2-0ubuntu0.16.04.2 [10.6 kB]
+Get:35 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libnss3 amd64 2:3.26.2-0ubuntu0.16.04.2 [1153 kB]
+Get:36 http://archive.ubuntu.com/ubuntu xenial/main amd64 ca-certificates-java all 20160321 [12.9 kB]                 
+Get:37 http://archive.ubuntu.com/ubuntu xenial/main amd64 libavahi-common-data amd64 0.6.32~rc+dfsg-1ubuntu2 [21.7 kB]
+Get:38 http://archive.ubuntu.com/ubuntu xenial/main amd64 libavahi-common3 amd64 0.6.32~rc+dfsg-1ubuntu2 [21.6 kB]    
+Get:39 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdbus-1-3 amd64 1.10.6-1ubuntu3.3 [161 kB]        
+Get:40 http://archive.ubuntu.com/ubuntu xenial/main amd64 libavahi-client3 amd64 0.6.32~rc+dfsg-1ubuntu2 [25.1 kB]    
+Get:41 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libnettle6 amd64 3.2-1ubuntu0.16.04.1 [93.5 kB]     
+Get:42 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhogweed4 amd64 3.2-1ubuntu0.16.04.1 [136 kB]     
+Get:43 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libp11-kit0 amd64 0.23.2-5~ubuntu16.04.1 [105 kB]   
+Get:44 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtasn1-6 amd64 4.7-3ubuntu0.16.04.1 [43.2 kB]     
+Get:45 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgnutls30 amd64 3.4.10-4ubuntu1.2 [547 kB]        
+Get:46 http://archive.ubuntu.com/ubuntu xenial/main amd64 libcups2 amd64 2.1.3-4 [197 kB]                             
+Get:47 http://archive.ubuntu.com/ubuntu xenial/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2194 B]                         
+Get:48 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpcsclite1 amd64 1.8.14-1ubuntu1.16.04.1 [21.4 kB]
+Get:49 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxi6 amd64 2:1.7.6-1 [28.6 kB]                            
+Get:50 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 openjdk-8-jre-headless amd64 8u121-b13-0ubuntu1.16.04.2 [26.9 MB]
+Get:51 http://archive.ubuntu.com/ubuntu xenial/main amd64 libjbig0 amd64 2.1-3.1 [26.6 kB]                            
+Get:52 http://archive.ubuntu.com/ubuntu xenial/main amd64 libtxc-dxtn-s2tc0 amd64 0~git20131104-1.1 [51.8 kB]         
+Get:53 http://archive.ubuntu.com/ubuntu xenial/main amd64 libcap-ng0 amd64 0.7.7-1 [10.9 kB]                          
+Get:54 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 dbus amd64 1.10.6-1ubuntu3.3 [142 kB]               
+Get:55 http://archive.ubuntu.com/ubuntu xenial/main amd64 libroken18-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1 [41.2 kB]
+Get:56 http://archive.ubuntu.com/ubuntu xenial/main amd64 libasn1-8-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1 [174 kB]
+Get:57 http://archive.ubuntu.com/ubuntu xenial/main amd64 libdbus-glib-1-2 amd64 0.106-1 [67.1 kB]                    
+Get:58 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdrm2 amd64 2.4.70-1~ubuntu16.04.1 [27.9 kB]      
+Get:59 http://archive.ubuntu.com/ubuntu xenial/main amd64 libelf1 amd64 0.165-3ubuntu1 [42.5 kB]                      
+Get:60 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libglib2.0-data all 2.48.2-0ubuntu1 [132 kB]        
+Get:61 http://archive.ubuntu.com/ubuntu xenial/main amd64 libhcrypto4-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1 [84.9 kB]
+Get:62 http://archive.ubuntu.com/ubuntu xenial/main amd64 libheimbase1-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1 [29.2 kB]
+Get:63 http://archive.ubuntu.com/ubuntu xenial/main amd64 libwind0-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1 [48.2 kB]
+Get:64 http://archive.ubuntu.com/ubuntu xenial/main amd64 libhx509-5-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1 [107 kB]
+Get:65 http://archive.ubuntu.com/ubuntu xenial/main amd64 libkrb5-26-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1 [202 kB]
+Get:66 http://archive.ubuntu.com/ubuntu xenial/main amd64 libheimntlm0-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1 [15.1 kB]
+Get:67 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgssapi3-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1 [96.1 kB]
+Get:68 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsasl2-modules-db amd64 2.1.26.dfsg1-14build1 [14.5 kB]   
+Get:69 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsasl2-2 amd64 2.1.26.dfsg1-14build1 [48.7 kB]            
+Get:70 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libldap-2.4-2 amd64 2.4.42+dfsg-2ubuntu3.1 [161 kB] 
+Get:71 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsasl2-modules amd64 2.1.26.dfsg1-14build1 [47.5 kB]      
+Get:72 http://archive.ubuntu.com/ubuntu xenial/main amd64 psmisc amd64 22.21-2.1build1 [48.0 kB]                      
+Get:73 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 shared-mime-info amd64 1.5-2ubuntu0.1 [405 kB]      
+Get:74 http://archive.ubuntu.com/ubuntu xenial/main amd64 xdg-user-dirs amd64 0.15-2ubuntu6 [61.7 kB]                 
+Get:75 http://archive.ubuntu.com/ubuntu xenial/main amd64 xml-core all 0.13+nmu2 [23.3 kB]                            
+Get:76 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 dbus-x11 amd64 1.10.6-1ubuntu3.3 [21.4 kB]          
+Get:77 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgtk2.0-common all 2.24.30-1ubuntu1 [123 kB]              
+Get:78 http://archive.ubuntu.com/ubuntu xenial/main amd64 libatk1.0-data all 2.18.0-1 [17.1 kB]                       
+Get:79 http://archive.ubuntu.com/ubuntu xenial/main amd64 libatk1.0-0 amd64 2.18.0-1 [56.9 kB]                        
+Get:80 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpixman-1-0 amd64 0.33.6-1 [231 kB]                       
+Get:81 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-render0 amd64 1.11.1-1ubuntu1 [11.4 kB]              
+Get:82 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-shm0 amd64 1.11.1-1ubuntu1 [5588 B]                  
+Get:83 http://archive.ubuntu.com/ubuntu xenial/main amd64 libcairo2 amd64 1.14.6-1 [555 kB]                           
+Get:84 http://archive.ubuntu.com/ubuntu xenial/main amd64 libtiff5 amd64 4.0.6-1 [144 kB]                             
+Get:85 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgdk-pixbuf2.0-common all 2.32.2-1ubuntu1.2 [10.2 kB]
+Get:86 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgdk-pixbuf2.0-0 amd64 2.32.2-1ubuntu1.2 [158 kB] 
+Get:87 http://archive.ubuntu.com/ubuntu xenial/main amd64 libthai-data all 0.1.24-2 [131 kB]                          
+Get:88 http://archive.ubuntu.com/ubuntu xenial/main amd64 libdatrie1 amd64 0.2.10-2 [17.3 kB]                         
+Get:89 http://archive.ubuntu.com/ubuntu xenial/main amd64 libthai0 amd64 0.1.24-2 [17.3 kB]                           
+Get:90 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpango-1.0-0 amd64 1.38.1-1 [148 kB]                      
+Get:91 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgraphite2-3 amd64 1.3.6-1ubuntu1 [70.8 kB]               
+Get:92 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libharfbuzz0b amd64 1.0.1-1ubuntu0.1 [140 kB]       
+Get:93 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpangoft2-1.0-0 amd64 1.38.1-1 [33.3 kB]                  
+Get:94 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpangocairo-1.0-0 amd64 1.38.1-1 [20.5 kB]                
+Get:95 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxrandr2 amd64 2:1.5.0-1 [17.6 kB]                        
+Get:96 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgtk2.0-0 amd64 2.24.30-1ubuntu1 [1777 kB]                
+Get:97 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libglapi-mesa amd64 12.0.6-0ubuntu0.16.04.1 [22.9 kB]
+Get:98 http://archive.ubuntu.com/ubuntu xenial/main amd64 libx11-xcb1 amd64 2:1.6.3-1ubuntu2 [8956 B]                 
+Get:99 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-dri2-0 amd64 1.11.1-1ubuntu1 [6882 B]                
+Get:100 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-dri3-0 amd64 1.11.1-1ubuntu1 [5218 B]               
+Get:101 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-glx0 amd64 1.11.1-1ubuntu1 [20.9 kB]                
+Get:102 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-present0 amd64 1.11.1-1ubuntu1 [5218 B]             
+Get:103 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-sync1 amd64 1.11.1-1ubuntu1 [8324 B]                
+Get:104 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdrm-amdgpu1 amd64 2.4.70-1~ubuntu16.04.1 [16.5 kB]
+Get:105 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpciaccess0 amd64 0.13.4-1 [18.1 kB]                     
+Get:106 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdrm-intel1 amd64 2.4.70-1~ubuntu16.04.1 [56.0 kB]
+Get:107 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdrm-nouveau2 amd64 2.4.70-1~ubuntu16.04.1 [16.3 kB]
+Get:108 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdrm-radeon1 amd64 2.4.70-1~ubuntu16.04.1 [21.6 kB]
+Get:109 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libllvm3.8 amd64 1:3.8-2ubuntu4 [10.3 MB]          
+Get:110 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgl1-mesa-dri amd64 12.0.6-0ubuntu0.16.04.1 [4344 kB]
+Get:111 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgl1-mesa-glx amd64 12.0.6-0ubuntu0.16.04.1 [130 kB]
+Get:112 http://archive.ubuntu.com/ubuntu xenial/main amd64 libasound2-data all 1.1.0-0ubuntu1 [29.4 kB]               
+Get:113 http://archive.ubuntu.com/ubuntu xenial/main amd64 libasound2 amd64 1.1.0-0ubuntu1 [350 kB]                   
+Get:114 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgif7 amd64 5.1.4-0.3~16.04 [30.5 kB]            
+Get:115 http://archive.ubuntu.com/ubuntu xenial/main amd64 libflac8 amd64 1.3.1-4 [210 kB]                            
+Get:116 http://archive.ubuntu.com/ubuntu xenial/main amd64 libvorbis0a amd64 1.3.5-3 [86.8 kB]                        
+Get:117 http://archive.ubuntu.com/ubuntu xenial/main amd64 libvorbisenc2 amd64 1.3.5-3 [70.7 kB]                      
+Get:118 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsndfile1 amd64 1.0.25-10 [137 kB]                       
+Get:119 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpulse0 amd64 1:8.0-0ubuntu3.2 [248 kB]          
+Get:120 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 openjdk-8-jre amd64 8u121-b13-0ubuntu1.16.04.2 [69.3 kB]
+Get:121 http://archive.ubuntu.com/ubuntu xenial/main amd64 default-jre amd64 2:1.8-56ubuntu2 [980 B]                  
+Get:122 http://archive.ubuntu.com/ubuntu xenial/main amd64 fonts-dejavu-extra all 2.35-1 [1749 kB]                    
+Get:123 http://archive.ubuntu.com/ubuntu xenial/main amd64 gconf2-common all 3.2.6-3ubuntu6 [21.0 kB]                 
+Get:124 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgconf-2-4 amd64 3.2.6-3ubuntu6 [84.6 kB]                
+Get:125 http://archive.ubuntu.com/ubuntu xenial/main amd64 gconf-service-backend amd64 3.2.6-3ubuntu6 [57.5 kB]       
+Get:126 http://archive.ubuntu.com/ubuntu xenial/main amd64 gconf-service amd64 3.2.6-3ubuntu6 [2046 B]                
+Get:127 http://archive.ubuntu.com/ubuntu xenial/main amd64 gconf2 amd64 3.2.6-3ubuntu6 [65.8 kB]                      
+Get:128 http://archive.ubuntu.com/ubuntu xenial/main amd64 hicolor-icon-theme all 0.15-0ubuntu1 [7750 B]              
+Get:129 http://archive.ubuntu.com/ubuntu xenial/main amd64 libavahi-glib1 amd64 0.6.32~rc+dfsg-1ubuntu2 [7726 B]      
+Get:130 http://archive.ubuntu.com/ubuntu xenial/main amd64 libltdl7 amd64 2.4.6-0.1 [38.3 kB]                         
+Get:131 http://archive.ubuntu.com/ubuntu xenial/main amd64 libtdb1 amd64 1.3.8-2 [38.2 kB]                            
+Get:132 http://archive.ubuntu.com/ubuntu xenial/main amd64 libvorbisfile3 amd64 1.3.5-3 [15.9 kB]                     
+Get:133 http://archive.ubuntu.com/ubuntu xenial/main amd64 sound-theme-freedesktop all 0.8-1 [385 kB]                 
+Get:134 http://archive.ubuntu.com/ubuntu xenial/main amd64 libcanberra0 amd64 0.30-2.1ubuntu1 [37.4 kB]               
+Get:135 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgnomevfs2-common amd64 1:2.24.4-6.1ubuntu1 [23.0 kB]    
+Get:136 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgnomevfs2-0 amd64 1:2.24.4-6.1ubuntu1 [213 kB]          
+Get:137 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgnome2-common all 2.32.1-5ubuntu1 [33.5 kB]             
+Get:138 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgnome-2-0 amd64 2.32.1-5ubuntu1 [53.7 kB]               
+Get:139 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgtk2.0-bin amd64 2.24.30-1ubuntu1 [9820 B]              
+Fetched 66.7 MB in 33s (1962 kB/s)                                                                                    
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libjson-c2:amd64.
+(Reading database ... 20710 files and directories currently installed.)
+Preparing to unpack .../libjson-c2_0.11-4ubuntu2_amd64.deb ...
+Unpacking libjson-c2:amd64 (0.11-4ubuntu2) ...
+Selecting previously unselected package libpopt0:amd64.
+Preparing to unpack .../libpopt0_1.16-10_amd64.deb ...
+Unpacking libpopt0:amd64 (1.16-10) ...
+Selecting previously unselected package sgml-base.
+Preparing to unpack .../sgml-base_1.26+nmu4ubuntu1_all.deb ...
+Unpacking sgml-base (1.26+nmu4ubuntu1) ...
+Selecting previously unselected package fonts-dejavu-core.
+Preparing to unpack .../fonts-dejavu-core_2.35-1_all.deb ...
+Unpacking fonts-dejavu-core (2.35-1) ...
+Selecting previously unselected package ucf.
+Preparing to unpack .../archives/ucf_3.0036_all.deb ...
+Moving old data out of the way
+Unpacking ucf (3.0036) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../fontconfig-config_2.11.94-0ubuntu1.1_all.deb ...
+Unpacking fontconfig-config (2.11.94-0ubuntu1.1) ...
+Selecting previously unselected package libpng12-0:amd64.
+Preparing to unpack .../libpng12-0_1.2.54-1ubuntu1_amd64.deb ...
+Unpacking libpng12-0:amd64 (1.2.54-1ubuntu1) ...
+Selecting previously unselected package libfreetype6:amd64.
+Preparing to unpack .../libfreetype6_2.6.1-0.1ubuntu2_amd64.deb ...
+Unpacking libfreetype6:amd64 (2.6.1-0.1ubuntu2) ...
+Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../libfontconfig1_2.11.94-0ubuntu1.1_amd64.deb ...
+Unpacking libfontconfig1:amd64 (2.11.94-0ubuntu1.1) ...
+Selecting previously unselected package fontconfig.
+Preparing to unpack .../fontconfig_2.11.94-0ubuntu1.1_amd64.deb ...
+Unpacking fontconfig (2.11.94-0ubuntu1.1) ...
+Selecting previously unselected package libasyncns0:amd64.
+Preparing to unpack .../libasyncns0_0.8-5build1_amd64.deb ...
+Unpacking libasyncns0:amd64 (0.8-5build1) ...
+Selecting previously unselected package libbonobo2-common.
+Preparing to unpack .../libbonobo2-common_2.32.1-3_all.deb ...
+Unpacking libbonobo2-common (2.32.1-3) ...
+Selecting previously unselected package libglib2.0-0:amd64.
+Preparing to unpack .../libglib2.0-0_2.48.2-0ubuntu1_amd64.deb ...
+Unpacking libglib2.0-0:amd64 (2.48.2-0ubuntu1) ...
+Selecting previously unselected package liborbit-2-0:amd64.
+Preparing to unpack .../liborbit-2-0_1%3a2.14.19-1build1_amd64.deb ...
+Unpacking liborbit-2-0:amd64 (1:2.14.19-1build1) ...
+Selecting previously unselected package libicu55:amd64.
+Preparing to unpack .../libicu55_55.1-7_amd64.deb ...
+Unpacking libicu55:amd64 (55.1-7) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../libxml2_2.9.3+dfsg1-1ubuntu0.1_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.3+dfsg1-1ubuntu0.1) ...
+Selecting previously unselected package libbonobo2-0:amd64.
+Preparing to unpack .../libbonobo2-0_2.32.1-3_amd64.deb ...
+Unpacking libbonobo2-0:amd64 (2.32.1-3) ...
+Selecting previously unselected package libjpeg-turbo8:amd64.
+Preparing to unpack .../libjpeg-turbo8_1.4.2-0ubuntu3_amd64.deb ...
+Unpacking libjpeg-turbo8:amd64 (1.4.2-0ubuntu3) ...
+Selecting previously unselected package liblcms2-2:amd64.
+Preparing to unpack .../liblcms2-2_2.6-3ubuntu2_amd64.deb ...
+Unpacking liblcms2-2:amd64 (2.6-3ubuntu2) ...
+Selecting previously unselected package libogg0:amd64.
+Preparing to unpack .../libogg0_1.3.2-1_amd64.deb ...
+Unpacking libogg0:amd64 (1.3.2-1) ...
+Selecting previously unselected package libxcomposite1:amd64.
+Preparing to unpack .../libxcomposite1_1%3a0.4.4-1_amd64.deb ...
+Unpacking libxcomposite1:amd64 (1:0.4.4-1) ...
+Selecting previously unselected package libxfixes3:amd64.
+Preparing to unpack .../libxfixes3_1%3a5.0.1-2_amd64.deb ...
+Unpacking libxfixes3:amd64 (1:5.0.1-2) ...
+Selecting previously unselected package libxrender1:amd64.
+Preparing to unpack .../libxrender1_1%3a0.9.9-0ubuntu1_amd64.deb ...
+Unpacking libxrender1:amd64 (1:0.9.9-0ubuntu1) ...
+Selecting previously unselected package libxcursor1:amd64.
+Preparing to unpack .../libxcursor1_1%3a1.1.14-1_amd64.deb ...
+Unpacking libxcursor1:amd64 (1:1.1.14-1) ...
+Selecting previously unselected package libxdamage1:amd64.
+Preparing to unpack .../libxdamage1_1%3a1.1.4-2_amd64.deb ...
+Unpacking libxdamage1:amd64 (1:1.1.4-2) ...
+Selecting previously unselected package libxinerama1:amd64.
+Preparing to unpack .../libxinerama1_2%3a1.1.3-1_amd64.deb ...
+Unpacking libxinerama1:amd64 (2:1.1.3-1) ...
+Selecting previously unselected package libxshmfence1:amd64.
+Preparing to unpack .../libxshmfence1_1.2-1_amd64.deb ...
+Unpacking libxshmfence1:amd64 (1.2-1) ...
+Selecting previously unselected package x11-common.
+Preparing to unpack .../x11-common_1%3a7.7+13ubuntu3_all.deb ...
+Unpacking x11-common (1:7.7+13ubuntu3) ...
+Selecting previously unselected package libxtst6:amd64.
+Preparing to unpack .../libxtst6_2%3a1.2.2-1_amd64.deb ...
+Unpacking libxtst6:amd64 (2:1.2.2-1) ...
+Selecting previously unselected package libxxf86vm1:amd64.
+Preparing to unpack .../libxxf86vm1_1%3a1.1.4-1_amd64.deb ...
+Unpacking libxxf86vm1:amd64 (1:1.1.4-1) ...
+Selecting previously unselected package java-common.
+Preparing to unpack .../java-common_0.56ubuntu2_all.deb ...
+Unpacking java-common (0.56ubuntu2) ...
+Selecting previously unselected package default-jre-headless.
+Preparing to unpack .../default-jre-headless_2%3a1.8-56ubuntu2_amd64.deb ...
+Unpacking default-jre-headless (2:1.8-56ubuntu2) ...
+Selecting previously unselected package libnspr4:amd64.
+Preparing to unpack .../libnspr4_2%3a4.12-0ubuntu0.16.04.1_amd64.deb ...
+Unpacking libnspr4:amd64 (2:4.12-0ubuntu0.16.04.1) ...
+Selecting previously unselected package libnss3-nssdb.
+Preparing to unpack .../libnss3-nssdb_2%3a3.26.2-0ubuntu0.16.04.2_all.deb ...
+Unpacking libnss3-nssdb (2:3.26.2-0ubuntu0.16.04.2) ...
+Selecting previously unselected package libnss3:amd64.
+Preparing to unpack .../libnss3_2%3a3.26.2-0ubuntu0.16.04.2_amd64.deb ...
+Unpacking libnss3:amd64 (2:3.26.2-0ubuntu0.16.04.2) ...
+Selecting previously unselected package ca-certificates-java.
+Preparing to unpack .../ca-certificates-java_20160321_all.deb ...
+Unpacking ca-certificates-java (20160321) ...
+Selecting previously unselected package libavahi-common-data:amd64.
+Preparing to unpack .../libavahi-common-data_0.6.32~rc+dfsg-1ubuntu2_amd64.deb ...
+Unpacking libavahi-common-data:amd64 (0.6.32~rc+dfsg-1ubuntu2) ...
+Selecting previously unselected package libavahi-common3:amd64.
+Preparing to unpack .../libavahi-common3_0.6.32~rc+dfsg-1ubuntu2_amd64.deb ...
+Unpacking libavahi-common3:amd64 (0.6.32~rc+dfsg-1ubuntu2) ...
+Selecting previously unselected package libdbus-1-3:amd64.
+Preparing to unpack .../libdbus-1-3_1.10.6-1ubuntu3.3_amd64.deb ...
+Unpacking libdbus-1-3:amd64 (1.10.6-1ubuntu3.3) ...
+Selecting previously unselected package libavahi-client3:amd64.
+Preparing to unpack .../libavahi-client3_0.6.32~rc+dfsg-1ubuntu2_amd64.deb ...
+Unpacking libavahi-client3:amd64 (0.6.32~rc+dfsg-1ubuntu2) ...
+Selecting previously unselected package libnettle6:amd64.
+Preparing to unpack .../libnettle6_3.2-1ubuntu0.16.04.1_amd64.deb ...
+Unpacking libnettle6:amd64 (3.2-1ubuntu0.16.04.1) ...
+Selecting previously unselected package libhogweed4:amd64.
+Preparing to unpack .../libhogweed4_3.2-1ubuntu0.16.04.1_amd64.deb ...
+Unpacking libhogweed4:amd64 (3.2-1ubuntu0.16.04.1) ...
+Selecting previously unselected package libp11-kit0:amd64.
+Preparing to unpack .../libp11-kit0_0.23.2-5~ubuntu16.04.1_amd64.deb ...
+Unpacking libp11-kit0:amd64 (0.23.2-5~ubuntu16.04.1) ...
+Selecting previously unselected package libtasn1-6:amd64.
+Preparing to unpack .../libtasn1-6_4.7-3ubuntu0.16.04.1_amd64.deb ...
+Unpacking libtasn1-6:amd64 (4.7-3ubuntu0.16.04.1) ...
+Selecting previously unselected package libgnutls30:amd64.
+Preparing to unpack .../libgnutls30_3.4.10-4ubuntu1.2_amd64.deb ...
+Unpacking libgnutls30:amd64 (3.4.10-4ubuntu1.2) ...
+Selecting previously unselected package libcups2:amd64.
+Preparing to unpack .../libcups2_2.1.3-4_amd64.deb ...
+Unpacking libcups2:amd64 (2.1.3-4) ...
+Selecting previously unselected package libjpeg8:amd64.
+Preparing to unpack .../libjpeg8_8c-2ubuntu8_amd64.deb ...
+Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
+Selecting previously unselected package libpcsclite1:amd64.
+Preparing to unpack .../libpcsclite1_1.8.14-1ubuntu1.16.04.1_amd64.deb ...
+Unpacking libpcsclite1:amd64 (1.8.14-1ubuntu1.16.04.1) ...
+Selecting previously unselected package libxi6:amd64.
+Preparing to unpack .../libxi6_2%3a1.7.6-1_amd64.deb ...
+Unpacking libxi6:amd64 (2:1.7.6-1) ...
+Selecting previously unselected package openjdk-8-jre-headless:amd64.
+Preparing to unpack .../openjdk-8-jre-headless_8u121-b13-0ubuntu1.16.04.2_amd64.deb ...
+Unpacking openjdk-8-jre-headless:amd64 (8u121-b13-0ubuntu1.16.04.2) ...
+Selecting previously unselected package libjbig0:amd64.
+Preparing to unpack .../libjbig0_2.1-3.1_amd64.deb ...
+Unpacking libjbig0:amd64 (2.1-3.1) ...
+Selecting previously unselected package libtxc-dxtn-s2tc0:amd64.
+Preparing to unpack .../libtxc-dxtn-s2tc0_0~git20131104-1.1_amd64.deb ...
+Unpacking libtxc-dxtn-s2tc0:amd64 (0~git20131104-1.1) ...
+Selecting previously unselected package libcap-ng0:amd64.
+Preparing to unpack .../libcap-ng0_0.7.7-1_amd64.deb ...
+Unpacking libcap-ng0:amd64 (0.7.7-1) ...
+Selecting previously unselected package dbus.
+Preparing to unpack .../dbus_1.10.6-1ubuntu3.3_amd64.deb ...
+Unpacking dbus (1.10.6-1ubuntu3.3) ...
+Selecting previously unselected package libroken18-heimdal:amd64.
+Preparing to unpack .../libroken18-heimdal_1.7~git20150920+dfsg-4ubuntu1_amd64.deb ...
+Unpacking libroken18-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1) ...
+Selecting previously unselected package libasn1-8-heimdal:amd64.
+Preparing to unpack .../libasn1-8-heimdal_1.7~git20150920+dfsg-4ubuntu1_amd64.deb ...
+Unpacking libasn1-8-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1) ...
+Selecting previously unselected package libdbus-glib-1-2:amd64.
+Preparing to unpack .../libdbus-glib-1-2_0.106-1_amd64.deb ...
+Unpacking libdbus-glib-1-2:amd64 (0.106-1) ...
+Selecting previously unselected package libdrm2:amd64.
+Preparing to unpack .../libdrm2_2.4.70-1~ubuntu16.04.1_amd64.deb ...
+Unpacking libdrm2:amd64 (2.4.70-1~ubuntu16.04.1) ...
+Selecting previously unselected package libelf1:amd64.
+Preparing to unpack .../libelf1_0.165-3ubuntu1_amd64.deb ...
+Unpacking libelf1:amd64 (0.165-3ubuntu1) ...
+Selecting previously unselected package libglib2.0-data.
+Preparing to unpack .../libglib2.0-data_2.48.2-0ubuntu1_all.deb ...
+Unpacking libglib2.0-data (2.48.2-0ubuntu1) ...
+Selecting previously unselected package libhcrypto4-heimdal:amd64.
+Preparing to unpack .../libhcrypto4-heimdal_1.7~git20150920+dfsg-4ubuntu1_amd64.deb ...
+Unpacking libhcrypto4-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1) ...
+Selecting previously unselected package libheimbase1-heimdal:amd64.
+Preparing to unpack .../libheimbase1-heimdal_1.7~git20150920+dfsg-4ubuntu1_amd64.deb ...
+Unpacking libheimbase1-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1) ...
+Selecting previously unselected package libwind0-heimdal:amd64.
+Preparing to unpack .../libwind0-heimdal_1.7~git20150920+dfsg-4ubuntu1_amd64.deb ...
+Unpacking libwind0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1) ...
+Selecting previously unselected package libhx509-5-heimdal:amd64.
+Preparing to unpack .../libhx509-5-heimdal_1.7~git20150920+dfsg-4ubuntu1_amd64.deb ...
+Unpacking libhx509-5-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1) ...
+Selecting previously unselected package libkrb5-26-heimdal:amd64.
+Preparing to unpack .../libkrb5-26-heimdal_1.7~git20150920+dfsg-4ubuntu1_amd64.deb ...
+Unpacking libkrb5-26-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1) ...
+Selecting previously unselected package libheimntlm0-heimdal:amd64.
+Preparing to unpack .../libheimntlm0-heimdal_1.7~git20150920+dfsg-4ubuntu1_amd64.deb ...
+Unpacking libheimntlm0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1) ...
+Selecting previously unselected package libgssapi3-heimdal:amd64.
+Preparing to unpack .../libgssapi3-heimdal_1.7~git20150920+dfsg-4ubuntu1_amd64.deb ...
+Unpacking libgssapi3-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../libsasl2-modules-db_2.1.26.dfsg1-14build1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.26.dfsg1-14build1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../libsasl2-2_2.1.26.dfsg1-14build1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.26.dfsg1-14build1) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../libldap-2.4-2_2.4.42+dfsg-2ubuntu3.1_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.1) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../libsasl2-modules_2.1.26.dfsg1-14build1_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.26.dfsg1-14build1) ...
+Selecting previously unselected package psmisc.
+Preparing to unpack .../psmisc_22.21-2.1build1_amd64.deb ...
+Unpacking psmisc (22.21-2.1build1) ...
+Selecting previously unselected package shared-mime-info.
+Preparing to unpack .../shared-mime-info_1.5-2ubuntu0.1_amd64.deb ...
+Unpacking shared-mime-info (1.5-2ubuntu0.1) ...
+Selecting previously unselected package xdg-user-dirs.
+Preparing to unpack .../xdg-user-dirs_0.15-2ubuntu6_amd64.deb ...
+Unpacking xdg-user-dirs (0.15-2ubuntu6) ...
+Selecting previously unselected package xml-core.
+Preparing to unpack .../xml-core_0.13+nmu2_all.deb ...
+Unpacking xml-core (0.13+nmu2) ...
+Selecting previously unselected package dbus-x11.
+Preparing to unpack .../dbus-x11_1.10.6-1ubuntu3.3_amd64.deb ...
+Unpacking dbus-x11 (1.10.6-1ubuntu3.3) ...
+Selecting previously unselected package libgtk2.0-common.
+Preparing to unpack .../libgtk2.0-common_2.24.30-1ubuntu1_all.deb ...
+Unpacking libgtk2.0-common (2.24.30-1ubuntu1) ...
+Selecting previously unselected package libatk1.0-data.
+Preparing to unpack .../libatk1.0-data_2.18.0-1_all.deb ...
+Unpacking libatk1.0-data (2.18.0-1) ...
+Selecting previously unselected package libatk1.0-0:amd64.
+Preparing to unpack .../libatk1.0-0_2.18.0-1_amd64.deb ...
+Unpacking libatk1.0-0:amd64 (2.18.0-1) ...
+Selecting previously unselected package libpixman-1-0:amd64.
+Preparing to unpack .../libpixman-1-0_0.33.6-1_amd64.deb ...
+Unpacking libpixman-1-0:amd64 (0.33.6-1) ...
+Selecting previously unselected package libxcb-render0:amd64.
+Preparing to unpack .../libxcb-render0_1.11.1-1ubuntu1_amd64.deb ...
+Unpacking libxcb-render0:amd64 (1.11.1-1ubuntu1) ...
+Selecting previously unselected package libxcb-shm0:amd64.
+Preparing to unpack .../libxcb-shm0_1.11.1-1ubuntu1_amd64.deb ...
+Unpacking libxcb-shm0:amd64 (1.11.1-1ubuntu1) ...
+Selecting previously unselected package libcairo2:amd64.
+Preparing to unpack .../libcairo2_1.14.6-1_amd64.deb ...
+Unpacking libcairo2:amd64 (1.14.6-1) ...
+Selecting previously unselected package libtiff5:amd64.
+Preparing to unpack .../libtiff5_4.0.6-1_amd64.deb ...
+Unpacking libtiff5:amd64 (4.0.6-1) ...
+Selecting previously unselected package libgdk-pixbuf2.0-common.
+Preparing to unpack .../libgdk-pixbuf2.0-common_2.32.2-1ubuntu1.2_all.deb ...
+Unpacking libgdk-pixbuf2.0-common (2.32.2-1ubuntu1.2) ...
+Selecting previously unselected package libgdk-pixbuf2.0-0:amd64.
+Preparing to unpack .../libgdk-pixbuf2.0-0_2.32.2-1ubuntu1.2_amd64.deb ...
+Unpacking libgdk-pixbuf2.0-0:amd64 (2.32.2-1ubuntu1.2) ...
+Selecting previously unselected package libthai-data.
+Preparing to unpack .../libthai-data_0.1.24-2_all.deb ...
+Unpacking libthai-data (0.1.24-2) ...
+Selecting previously unselected package libdatrie1:amd64.
+Preparing to unpack .../libdatrie1_0.2.10-2_amd64.deb ...
+Unpacking libdatrie1:amd64 (0.2.10-2) ...
+Selecting previously unselected package libthai0:amd64.
+Preparing to unpack .../libthai0_0.1.24-2_amd64.deb ...
+Unpacking libthai0:amd64 (0.1.24-2) ...
+Selecting previously unselected package libpango-1.0-0:amd64.
+Preparing to unpack .../libpango-1.0-0_1.38.1-1_amd64.deb ...
+Unpacking libpango-1.0-0:amd64 (1.38.1-1) ...
+Selecting previously unselected package libgraphite2-3:amd64.
+Preparing to unpack .../libgraphite2-3_1.3.6-1ubuntu1_amd64.deb ...
+Unpacking libgraphite2-3:amd64 (1.3.6-1ubuntu1) ...
+Selecting previously unselected package libharfbuzz0b:amd64.
+Preparing to unpack .../libharfbuzz0b_1.0.1-1ubuntu0.1_amd64.deb ...
+Unpacking libharfbuzz0b:amd64 (1.0.1-1ubuntu0.1) ...
+Selecting previously unselected package libpangoft2-1.0-0:amd64.
+Preparing to unpack .../libpangoft2-1.0-0_1.38.1-1_amd64.deb ...
+Unpacking libpangoft2-1.0-0:amd64 (1.38.1-1) ...
+Selecting previously unselected package libpangocairo-1.0-0:amd64.
+Preparing to unpack .../libpangocairo-1.0-0_1.38.1-1_amd64.deb ...
+Unpacking libpangocairo-1.0-0:amd64 (1.38.1-1) ...
+Selecting previously unselected package libxrandr2:amd64.
+Preparing to unpack .../libxrandr2_2%3a1.5.0-1_amd64.deb ...
+Unpacking libxrandr2:amd64 (2:1.5.0-1) ...
+Selecting previously unselected package libgtk2.0-0:amd64.
+Preparing to unpack .../libgtk2.0-0_2.24.30-1ubuntu1_amd64.deb ...
+Unpacking libgtk2.0-0:amd64 (2.24.30-1ubuntu1) ...
+Selecting previously unselected package libglapi-mesa:amd64.
+Preparing to unpack .../libglapi-mesa_12.0.6-0ubuntu0.16.04.1_amd64.deb ...
+Unpacking libglapi-mesa:amd64 (12.0.6-0ubuntu0.16.04.1) ...
+Selecting previously unselected package libx11-xcb1:amd64.
+Preparing to unpack .../libx11-xcb1_2%3a1.6.3-1ubuntu2_amd64.deb ...
+Unpacking libx11-xcb1:amd64 (2:1.6.3-1ubuntu2) ...
+Selecting previously unselected package libxcb-dri2-0:amd64.
+Preparing to unpack .../libxcb-dri2-0_1.11.1-1ubuntu1_amd64.deb ...
+Unpacking libxcb-dri2-0:amd64 (1.11.1-1ubuntu1) ...
+Selecting previously unselected package libxcb-dri3-0:amd64.
+Preparing to unpack .../libxcb-dri3-0_1.11.1-1ubuntu1_amd64.deb ...
+Unpacking libxcb-dri3-0:amd64 (1.11.1-1ubuntu1) ...
+Selecting previously unselected package libxcb-glx0:amd64.
+Preparing to unpack .../libxcb-glx0_1.11.1-1ubuntu1_amd64.deb ...
+Unpacking libxcb-glx0:amd64 (1.11.1-1ubuntu1) ...
+Selecting previously unselected package libxcb-present0:amd64.
+Preparing to unpack .../libxcb-present0_1.11.1-1ubuntu1_amd64.deb ...
+Unpacking libxcb-present0:amd64 (1.11.1-1ubuntu1) ...
+Selecting previously unselected package libxcb-sync1:amd64.
+Preparing to unpack .../libxcb-sync1_1.11.1-1ubuntu1_amd64.deb ...
+Unpacking libxcb-sync1:amd64 (1.11.1-1ubuntu1) ...
+Selecting previously unselected package libdrm-amdgpu1:amd64.
+Preparing to unpack .../libdrm-amdgpu1_2.4.70-1~ubuntu16.04.1_amd64.deb ...
+Unpacking libdrm-amdgpu1:amd64 (2.4.70-1~ubuntu16.04.1) ...
+Selecting previously unselected package libpciaccess0:amd64.
+Preparing to unpack .../libpciaccess0_0.13.4-1_amd64.deb ...
+Unpacking libpciaccess0:amd64 (0.13.4-1) ...
+Selecting previously unselected package libdrm-intel1:amd64.
+Preparing to unpack .../libdrm-intel1_2.4.70-1~ubuntu16.04.1_amd64.deb ...
+Unpacking libdrm-intel1:amd64 (2.4.70-1~ubuntu16.04.1) ...
+Selecting previously unselected package libdrm-nouveau2:amd64.
+Preparing to unpack .../libdrm-nouveau2_2.4.70-1~ubuntu16.04.1_amd64.deb ...
+Unpacking libdrm-nouveau2:amd64 (2.4.70-1~ubuntu16.04.1) ...
+Selecting previously unselected package libdrm-radeon1:amd64.
+Preparing to unpack .../libdrm-radeon1_2.4.70-1~ubuntu16.04.1_amd64.deb ...
+Unpacking libdrm-radeon1:amd64 (2.4.70-1~ubuntu16.04.1) ...
+Selecting previously unselected package libllvm3.8:amd64.
+Preparing to unpack .../libllvm3.8_1%3a3.8-2ubuntu4_amd64.deb ...
+Unpacking libllvm3.8:amd64 (1:3.8-2ubuntu4) ...
+Selecting previously unselected package libgl1-mesa-dri:amd64.
+Preparing to unpack .../libgl1-mesa-dri_12.0.6-0ubuntu0.16.04.1_amd64.deb ...
+Unpacking libgl1-mesa-dri:amd64 (12.0.6-0ubuntu0.16.04.1) ...
+Selecting previously unselected package libgl1-mesa-glx:amd64.
+Preparing to unpack .../libgl1-mesa-glx_12.0.6-0ubuntu0.16.04.1_amd64.deb ...
+Unpacking libgl1-mesa-glx:amd64 (12.0.6-0ubuntu0.16.04.1) ...
+Selecting previously unselected package libasound2-data.
+Preparing to unpack .../libasound2-data_1.1.0-0ubuntu1_all.deb ...
+Unpacking libasound2-data (1.1.0-0ubuntu1) ...
+Selecting previously unselected package libasound2:amd64.
+Preparing to unpack .../libasound2_1.1.0-0ubuntu1_amd64.deb ...
+Unpacking libasound2:amd64 (1.1.0-0ubuntu1) ...
+Selecting previously unselected package libgif7:amd64.
+Preparing to unpack .../libgif7_5.1.4-0.3~16.04_amd64.deb ...
+Unpacking libgif7:amd64 (5.1.4-0.3~16.04) ...
+Selecting previously unselected package libflac8:amd64.
+Preparing to unpack .../libflac8_1.3.1-4_amd64.deb ...
+Unpacking libflac8:amd64 (1.3.1-4) ...
+Selecting previously unselected package libvorbis0a:amd64.
+Preparing to unpack .../libvorbis0a_1.3.5-3_amd64.deb ...
+Unpacking libvorbis0a:amd64 (1.3.5-3) ...
+Selecting previously unselected package libvorbisenc2:amd64.
+Preparing to unpack .../libvorbisenc2_1.3.5-3_amd64.deb ...
+Unpacking libvorbisenc2:amd64 (1.3.5-3) ...
+Selecting previously unselected package libsndfile1:amd64.
+Preparing to unpack .../libsndfile1_1.0.25-10_amd64.deb ...
+Unpacking libsndfile1:amd64 (1.0.25-10) ...
+Selecting previously unselected package libpulse0:amd64.
+Preparing to unpack .../libpulse0_1%3a8.0-0ubuntu3.2_amd64.deb ...
+Unpacking libpulse0:amd64 (1:8.0-0ubuntu3.2) ...
+Selecting previously unselected package openjdk-8-jre:amd64.
+Preparing to unpack .../openjdk-8-jre_8u121-b13-0ubuntu1.16.04.2_amd64.deb ...
+Unpacking openjdk-8-jre:amd64 (8u121-b13-0ubuntu1.16.04.2) ...
+Selecting previously unselected package default-jre.
+Preparing to unpack .../default-jre_2%3a1.8-56ubuntu2_amd64.deb ...
+Unpacking default-jre (2:1.8-56ubuntu2) ...
+Selecting previously unselected package fonts-dejavu-extra.
+Preparing to unpack .../fonts-dejavu-extra_2.35-1_all.deb ...
+Unpacking fonts-dejavu-extra (2.35-1) ...
+Selecting previously unselected package gconf2-common.
+Preparing to unpack .../gconf2-common_3.2.6-3ubuntu6_all.deb ...
+Unpacking gconf2-common (3.2.6-3ubuntu6) ...
+Selecting previously unselected package libgconf-2-4:amd64.
+Preparing to unpack .../libgconf-2-4_3.2.6-3ubuntu6_amd64.deb ...
+Unpacking libgconf-2-4:amd64 (3.2.6-3ubuntu6) ...
+Selecting previously unselected package gconf-service-backend.
+Preparing to unpack .../gconf-service-backend_3.2.6-3ubuntu6_amd64.deb ...
+Unpacking gconf-service-backend (3.2.6-3ubuntu6) ...
+Selecting previously unselected package gconf-service.
+Preparing to unpack .../gconf-service_3.2.6-3ubuntu6_amd64.deb ...
+Unpacking gconf-service (3.2.6-3ubuntu6) ...
+Selecting previously unselected package gconf2.
+Preparing to unpack .../gconf2_3.2.6-3ubuntu6_amd64.deb ...
+Unpacking gconf2 (3.2.6-3ubuntu6) ...
+Selecting previously unselected package hicolor-icon-theme.
+Preparing to unpack .../hicolor-icon-theme_0.15-0ubuntu1_all.deb ...
+Unpacking hicolor-icon-theme (0.15-0ubuntu1) ...
+Selecting previously unselected package libavahi-glib1:amd64.
+Preparing to unpack .../libavahi-glib1_0.6.32~rc+dfsg-1ubuntu2_amd64.deb ...
+Unpacking libavahi-glib1:amd64 (0.6.32~rc+dfsg-1ubuntu2) ...
+Selecting previously unselected package libltdl7:amd64.
+Preparing to unpack .../libltdl7_2.4.6-0.1_amd64.deb ...
+Unpacking libltdl7:amd64 (2.4.6-0.1) ...
+Selecting previously unselected package libtdb1:amd64.
+Preparing to unpack .../libtdb1_1.3.8-2_amd64.deb ...
+Unpacking libtdb1:amd64 (1.3.8-2) ...
+Selecting previously unselected package libvorbisfile3:amd64.
+Preparing to unpack .../libvorbisfile3_1.3.5-3_amd64.deb ...
+Unpacking libvorbisfile3:amd64 (1.3.5-3) ...
+Selecting previously unselected package sound-theme-freedesktop.
+Preparing to unpack .../sound-theme-freedesktop_0.8-1_all.deb ...
+Unpacking sound-theme-freedesktop (0.8-1) ...
+Selecting previously unselected package libcanberra0:amd64.
+Preparing to unpack .../libcanberra0_0.30-2.1ubuntu1_amd64.deb ...
+Unpacking libcanberra0:amd64 (0.30-2.1ubuntu1) ...
+Selecting previously unselected package libgnomevfs2-common.
+Preparing to unpack .../libgnomevfs2-common_1%3a2.24.4-6.1ubuntu1_amd64.deb ...
+Unpacking libgnomevfs2-common (1:2.24.4-6.1ubuntu1) ...
+Selecting previously unselected package libgnomevfs2-0:amd64.
+Preparing to unpack .../libgnomevfs2-0_1%3a2.24.4-6.1ubuntu1_amd64.deb ...
+Unpacking libgnomevfs2-0:amd64 (1:2.24.4-6.1ubuntu1) ...
+Selecting previously unselected package libgnome2-common.
+Preparing to unpack .../libgnome2-common_2.32.1-5ubuntu1_all.deb ...
+Unpacking libgnome2-common (2.32.1-5ubuntu1) ...
+Selecting previously unselected package libgnome-2-0:amd64.
+Preparing to unpack .../libgnome-2-0_2.32.1-5ubuntu1_amd64.deb ...
+Unpacking libgnome-2-0:amd64 (2.32.1-5ubuntu1) ...
+Selecting previously unselected package libgtk2.0-bin.
+Preparing to unpack .../libgtk2.0-bin_2.24.30-1ubuntu1_amd64.deb ...
+Unpacking libgtk2.0-bin (2.24.30-1ubuntu1) ...
+Processing triggers for libc-bin (2.23-0ubuntu5) ...
+Processing triggers for systemd (229-4ubuntu13) ...
+Processing triggers for ca-certificates (20160104ubuntu1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+Processing triggers for mime-support (3.59ubuntu1) ...
+Setting up libjson-c2:amd64 (0.11-4ubuntu2) ...
+Setting up libpopt0:amd64 (1.16-10) ...
+Setting up sgml-base (1.26+nmu4ubuntu1) ...
+Setting up fonts-dejavu-core (2.35-1) ...
+Setting up ucf (3.0036) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Setting up fontconfig-config (2.11.94-0ubuntu1.1) ...
+Setting up libpng12-0:amd64 (1.2.54-1ubuntu1) ...
+Setting up libfreetype6:amd64 (2.6.1-0.1ubuntu2) ...
+Setting up libfontconfig1:amd64 (2.11.94-0ubuntu1.1) ...
+Setting up fontconfig (2.11.94-0ubuntu1.1) ...
+Regenerating fonts cache... done.
+Setting up libasyncns0:amd64 (0.8-5build1) ...
+Setting up libbonobo2-common (2.32.1-3) ...
+Setting up libglib2.0-0:amd64 (2.48.2-0ubuntu1) ...
+No schema files found: doing nothing.
+Setting up liborbit-2-0:amd64 (1:2.14.19-1build1) ...
+Setting up libicu55:amd64 (55.1-7) ...
+Setting up libxml2:amd64 (2.9.3+dfsg1-1ubuntu0.1) ...
+Setting up libbonobo2-0:amd64 (2.32.1-3) ...
+Setting up libjpeg-turbo8:amd64 (1.4.2-0ubuntu3) ...
+Setting up liblcms2-2:amd64 (2.6-3ubuntu2) ...
+Setting up libogg0:amd64 (1.3.2-1) ...
+Setting up libxcomposite1:amd64 (1:0.4.4-1) ...
+Setting up libxfixes3:amd64 (1:5.0.1-2) ...
+Setting up libxrender1:amd64 (1:0.9.9-0ubuntu1) ...
+Setting up libxcursor1:amd64 (1:1.1.14-1) ...
+Setting up libxdamage1:amd64 (1:1.1.4-2) ...
+Setting up libxinerama1:amd64 (2:1.1.3-1) ...
+Setting up libxshmfence1:amd64 (1.2-1) ...
+Setting up x11-common (1:7.7+13ubuntu3) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up libxtst6:amd64 (2:1.2.2-1) ...
+Setting up libxxf86vm1:amd64 (1:1.1.4-1) ...
+Setting up java-common (0.56ubuntu2) ...
+Setting up libnspr4:amd64 (2:4.12-0ubuntu0.16.04.1) ...
+Setting up libavahi-common-data:amd64 (0.6.32~rc+dfsg-1ubuntu2) ...
+Setting up libavahi-common3:amd64 (0.6.32~rc+dfsg-1ubuntu2) ...
+Setting up libdbus-1-3:amd64 (1.10.6-1ubuntu3.3) ...
+Setting up libavahi-client3:amd64 (0.6.32~rc+dfsg-1ubuntu2) ...
+Setting up libnettle6:amd64 (3.2-1ubuntu0.16.04.1) ...
+Setting up libhogweed4:amd64 (3.2-1ubuntu0.16.04.1) ...
+Setting up libp11-kit0:amd64 (0.23.2-5~ubuntu16.04.1) ...
+Setting up libtasn1-6:amd64 (4.7-3ubuntu0.16.04.1) ...
+Setting up libgnutls30:amd64 (3.4.10-4ubuntu1.2) ...
+Setting up libcups2:amd64 (2.1.3-4) ...
+Setting up libjpeg8:amd64 (8c-2ubuntu8) ...
+Setting up libpcsclite1:amd64 (1.8.14-1ubuntu1.16.04.1) ...
+Setting up libxi6:amd64 (2:1.7.6-1) ...
+Setting up libjbig0:amd64 (2.1-3.1) ...
+Setting up libtxc-dxtn-s2tc0:amd64 (0~git20131104-1.1) ...
+update-alternatives: using /usr/lib/x86_64-linux-gnu/libtxc_dxtn_s2tc.so.0 to provide /usr/lib/x86_64-linux-gnu/libtxc_dxtn.so (libtxc-dxtn-x86_64-linux-gnu) in auto mode
+Setting up libcap-ng0:amd64 (0.7.7-1) ...
+Setting up dbus (1.10.6-1ubuntu3.3) ...
+Setting up libroken18-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1) ...
+Setting up libasn1-8-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1) ...
+Setting up libdbus-glib-1-2:amd64 (0.106-1) ...
+Setting up libdrm2:amd64 (2.4.70-1~ubuntu16.04.1) ...
+Setting up libelf1:amd64 (0.165-3ubuntu1) ...
+Setting up libglib2.0-data (2.48.2-0ubuntu1) ...
+Setting up libhcrypto4-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1) ...
+Setting up libheimbase1-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1) ...
+Setting up libwind0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1) ...
+Setting up libhx509-5-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1) ...
+Setting up libkrb5-26-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1) ...
+Setting up libheimntlm0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1) ...
+Setting up libgssapi3-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1) ...
+Setting up libsasl2-modules-db:amd64 (2.1.26.dfsg1-14build1) ...
+Setting up libsasl2-2:amd64 (2.1.26.dfsg1-14build1) ...
+Setting up libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.1) ...
+Setting up libsasl2-modules:amd64 (2.1.26.dfsg1-14build1) ...
+Setting up psmisc (22.21-2.1build1) ...
+Setting up shared-mime-info (1.5-2ubuntu0.1) ...
+Setting up xdg-user-dirs (0.15-2ubuntu6) ...
+Setting up xml-core (0.13+nmu2) ...
+Setting up dbus-x11 (1.10.6-1ubuntu3.3) ...
+Setting up libgtk2.0-common (2.24.30-1ubuntu1) ...
+Setting up libatk1.0-data (2.18.0-1) ...
+Setting up libatk1.0-0:amd64 (2.18.0-1) ...
+Setting up libpixman-1-0:amd64 (0.33.6-1) ...
+Setting up libxcb-render0:amd64 (1.11.1-1ubuntu1) ...
+Setting up libxcb-shm0:amd64 (1.11.1-1ubuntu1) ...
+Setting up libcairo2:amd64 (1.14.6-1) ...
+Setting up libtiff5:amd64 (4.0.6-1) ...
+Setting up libgdk-pixbuf2.0-common (2.32.2-1ubuntu1.2) ...
+Setting up libgdk-pixbuf2.0-0:amd64 (2.32.2-1ubuntu1.2) ...
+Setting up libthai-data (0.1.24-2) ...
+Setting up libdatrie1:amd64 (0.2.10-2) ...
+Setting up libthai0:amd64 (0.1.24-2) ...
+Setting up libpango-1.0-0:amd64 (1.38.1-1) ...
+Setting up libgraphite2-3:amd64 (1.3.6-1ubuntu1) ...
+Setting up libharfbuzz0b:amd64 (1.0.1-1ubuntu0.1) ...
+Setting up libpangoft2-1.0-0:amd64 (1.38.1-1) ...
+Setting up libpangocairo-1.0-0:amd64 (1.38.1-1) ...
+Setting up libxrandr2:amd64 (2:1.5.0-1) ...
+Setting up libgtk2.0-0:amd64 (2.24.30-1ubuntu1) ...
+Setting up libglapi-mesa:amd64 (12.0.6-0ubuntu0.16.04.1) ...
+Setting up libx11-xcb1:amd64 (2:1.6.3-1ubuntu2) ...
+Setting up libxcb-dri2-0:amd64 (1.11.1-1ubuntu1) ...
+Setting up libxcb-dri3-0:amd64 (1.11.1-1ubuntu1) ...
+Setting up libxcb-glx0:amd64 (1.11.1-1ubuntu1) ...
+Setting up libxcb-present0:amd64 (1.11.1-1ubuntu1) ...
+Setting up libxcb-sync1:amd64 (1.11.1-1ubuntu1) ...
+Setting up libdrm-amdgpu1:amd64 (2.4.70-1~ubuntu16.04.1) ...
+Setting up libpciaccess0:amd64 (0.13.4-1) ...
+Setting up libdrm-intel1:amd64 (2.4.70-1~ubuntu16.04.1) ...
+Setting up libdrm-nouveau2:amd64 (2.4.70-1~ubuntu16.04.1) ...
+Setting up libdrm-radeon1:amd64 (2.4.70-1~ubuntu16.04.1) ...
+Setting up libllvm3.8:amd64 (1:3.8-2ubuntu4) ...
+Setting up libgl1-mesa-dri:amd64 (12.0.6-0ubuntu0.16.04.1) ...
+Setting up libgl1-mesa-glx:amd64 (12.0.6-0ubuntu0.16.04.1) ...
+update-alternatives: using /usr/lib/x86_64-linux-gnu/mesa/ld.so.conf to provide /etc/ld.so.conf.d/x86_64-linux-gnu_GL.conf (x86_64-linux-gnu_gl_conf) in auto mode
+Setting up libasound2-data (1.1.0-0ubuntu1) ...
+Setting up libasound2:amd64 (1.1.0-0ubuntu1) ...
+Setting up libgif7:amd64 (5.1.4-0.3~16.04) ...
+Setting up libflac8:amd64 (1.3.1-4) ...
+Setting up libvorbis0a:amd64 (1.3.5-3) ...
+Setting up libvorbisenc2:amd64 (1.3.5-3) ...
+Setting up libsndfile1:amd64 (1.0.25-10) ...
+Setting up libpulse0:amd64 (1:8.0-0ubuntu3.2) ...
+Setting up fonts-dejavu-extra (2.35-1) ...
+Setting up gconf2-common (3.2.6-3ubuntu6) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+
+Creating config file /etc/gconf/2/path with new version
+Setting up libgconf-2-4:amd64 (3.2.6-3ubuntu6) ...
+Setting up hicolor-icon-theme (0.15-0ubuntu1) ...
+Setting up libavahi-glib1:amd64 (0.6.32~rc+dfsg-1ubuntu2) ...
+Setting up libltdl7:amd64 (2.4.6-0.1) ...
+Setting up libtdb1:amd64 (1.3.8-2) ...
+Setting up libvorbisfile3:amd64 (1.3.5-3) ...
+Setting up sound-theme-freedesktop (0.8-1) ...
+Setting up libcanberra0:amd64 (0.30-2.1ubuntu1) ...
+Setting up libgtk2.0-bin (2.24.30-1ubuntu1) ...
+Setting up libnss3-nssdb (2:3.26.2-0ubuntu0.16.04.2) ...
+Setting up gconf-service (3.2.6-3ubuntu6) ...
+Setting up libnss3:amd64 (2:3.26.2-0ubuntu0.16.04.2) ...
+Setting up openjdk-8-jre-headless:amd64 (8u121-b13-0ubuntu1.16.04.2) ...
+update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/rmid to provide /usr/bin/rmid (rmid) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java to provide /usr/bin/java (java) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/jjs to provide /usr/bin/jjs (jjs) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/pack200 to provide /usr/bin/pack200 (pack200) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/orbd to provide /usr/bin/orbd (orbd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/servertool to provide /usr/bin/servertool (servertool) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/tnameserv to provide /usr/bin/tnameserv (tnameserv) in auto mode
+update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+Setting up ca-certificates-java (20160321) ...
+Adding debian:VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem
+Adding debian:SecureSign_RootCA11.pem
+Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+Adding debian:UTN_USERFirst_Hardware_Root_CA.pem
+Adding debian:Certum_Root_CA.pem
+Adding debian:SwissSign_Gold_CA_-_G2.pem
+Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+Adding debian:S-TRUST_Universal_Root_CA.pem
+Adding debian:S-TRUST_Authentication_and_Encryption_Root_CA_2005_PN.pem
+Adding debian:Taiwan_GRCA.pem
+Adding debian:GeoTrust_Primary_Certification_Authority.pem
+Adding debian:Verisign_Class_2_Public_Primary_Certification_Authority_-_G3.pem
+Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
+Adding debian:Visa_eCommerce_Root.pem
+Adding debian:SwissSign_Platinum_CA_-_G2.pem
+Adding debian:USERTrust_RSA_Certification_Authority.pem
+Adding debian:Go_Daddy_Class_2_CA.pem
+Adding debian:Secure_Global_CA.pem
+Adding debian:Comodo_Secure_Services_root.pem
+Adding debian:WoSign_China.pem
+Adding debian:Sonera_Class_1_Root_CA.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+Adding debian:Entrust_Root_Certification_Authority.pem
+Adding debian:Verisign_Class_3_Public_Primary_Certification_Authority_-_G3.pem
+Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+Adding debian:CNNIC_ROOT.pem
+Adding debian:Camerfirma_Global_Chambersign_Root.pem
+Adding debian:Verisign_Class_3_Public_Primary_Certification_Authority_-_G2.pem
+Adding debian:Baltimore_CyberTrust_Root.pem
+Adding debian:AffirmTrust_Premium_ECC.pem
+Adding debian:Actalis_Authentication_Root_CA.pem
+Adding debian:QuoVadis_Root_CA_2.pem
+Adding debian:Atos_TrustedRoot_2011.pem
+Adding debian:Verisign_Class_1_Public_Primary_Certification_Authority_-_G2.pem
+Adding debian:USERTrust_ECC_Certification_Authority.pem
+Adding debian:DST_Root_CA_X3.pem
+Adding debian:GeoTrust_Global_CA.pem
+Adding debian:QuoVadis_Root_CA_3_G3.pem
+Adding debian:DST_ACES_CA_X6.pem
+Adding debian:Verisign_Class_1_Public_Primary_Certification_Authority_-_G3.pem
+Adding debian:PSCProcert.pem
+Adding debian:WoSign.pem
+Adding debian:Verisign_Class_2_Public_Primary_Certification_Authority_-_G2.pem
+Adding debian:DigiCert_Assured_ID_Root_G2.pem
+Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2011.pem
+Adding debian:COMODO_ECC_Certification_Authority.pem
+Adding debian:DigiCert_Assured_ID_Root_CA.pem
+Adding debian:ApplicationCA_-_Japanese_Government.pem
+Adding debian:CA_Disig.pem
+Adding debian:thawte_Primary_Root_CA_-_G2.pem
+Adding debian:Staat_der_Nederlanden_Root_CA_-_G2.pem
+Adding debian:NetLock_Business_=Class_B=_Root.pem
+Adding debian:UTN_USERFirst_Email_Root_CA.pem
+Adding debian:WellsSecure_Public_Root_Certificate_Authority.pem
+Adding debian:Certum_Trusted_Network_CA.pem
+Adding debian:NetLock_Express_=Class_C=_Root.pem
+Adding debian:SwissSign_Silver_CA_-_G2.pem
+Adding debian:thawte_Primary_Root_CA.pem
+Adding debian:Equifax_Secure_CA.pem
+Adding debian:IGC_A.pem
+Adding debian:Verisign_Class_1_Public_Primary_Certification_Authority.pem
+Adding debian:Juur-SK.pem
+Adding debian:Izenpe.com.pem
+Adding debian:AddTrust_External_Root.pem
+Adding debian:Swisscom_Root_EV_CA_2.pem
+Adding debian:TÜRKTRUST_Elektronik_Sertifika_Hizmet_Sağlayıcısı_H5.pem
+Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+Adding debian:Buypass_Class_3_Root_CA.pem
+Adding debian:DigiCert_Trusted_Root_G4.pem
+Adding debian:Equifax_Secure_Global_eBusiness_CA.pem
+Adding debian:QuoVadis_Root_CA_2_G3.pem
+Adding debian:QuoVadis_Root_CA_1_G3.pem
+Adding debian:RSA_Security_2048_v3.pem
+Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+Adding debian:E-Tugra_Certification_Authority.pem
+Adding debian:Swisscom_Root_CA_2.pem
+Adding debian:Deutsche_Telekom_Root_CA_2.pem
+Adding debian:CA_Disig_Root_R1.pem
+Adding debian:QuoVadis_Root_CA.pem
+Adding debian:China_Internet_Network_Information_Center_EV_Certificates_Root.pem
+Adding debian:Network_Solutions_Certificate_Authority.pem
+Adding debian:thawte_Primary_Root_CA_-_G3.pem
+Adding debian:Sonera_Class_2_Root_CA.pem
+Adding debian:EC-ACC.pem
+Adding debian:GeoTrust_Primary_Certification_Authority_-_G3.pem
+Adding debian:DigiCert_Global_Root_CA.pem
+Adding debian:GeoTrust_Primary_Certification_Authority_-_G2.pem
+Adding debian:EBG_Elektronik_Sertifika_Hizmet_Sağlayıcısı.pem
+Adding debian:OISTE_WISeKey_Global_Root_GA_CA.pem
+Adding debian:AffirmTrust_Commercial.pem
+Adding debian:Hongkong_Post_Root_CA_1.pem
+Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+Adding debian:TWCA_Global_Root_CA.pem
+Adding debian:GeoTrust_Global_CA_2.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+Adding debian:Swisscom_Root_CA_1.pem
+Adding debian:StartCom_Certification_Authority.pem
+Adding debian:TÜRKTRUST_Elektronik_Sertifika_Hizmet_Sağlayıcısı_H6.pem
+Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+Adding debian:GeoTrust_Universal_CA.pem
+Adding debian:Staat_der_Nederlanden_EV_Root_CA.pem
+Adding debian:Root_CA_Generalitat_Valenciana.pem
+Adding debian:Starfield_Class_2_CA.pem
+Adding debian:VeriSign_Class_3_Public_Primary_Certification_Authority_-_G4.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+Adding debian:Microsec_e-Szigno_Root_CA.pem
+Adding debian:Verisign_Class_3_Public_Primary_Certification_Authority_2.pem
+Adding debian:CA_Disig_Root_R2.pem
+Adding debian:GlobalSign_Root_CA_-_R2.pem
+Adding debian:AddTrust_Qualified_Certificates_Root.pem
+Adding debian:AffirmTrust_Premium.pem
+Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+Adding debian:DigiCert_Assured_ID_Root_G3.pem
+Adding debian:NetLock_Notary_=Class_A=_Root.pem
+Adding debian:COMODO_Certification_Authority.pem
+Adding debian:Security_Communication_Root_CA.pem
+Adding debian:Chambers_of_Commerce_Root_-_2008.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+Adding debian:GlobalSign_Root_CA_-_R3.pem
+Adding debian:DigiCert_Global_Root_G2.pem
+Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+Adding debian:SecureTrust_CA.pem
+Adding debian:TWCA_Root_Certification_Authority.pem
+Adding debian:Certigna.pem
+Adding debian:Security_Communication_EV_RootCA1.pem
+Adding debian:GeoTrust_Universal_CA_2.pem
+Adding debian:Verisign_Class_3_Public_Primary_Certification_Authority.pem
+Adding debian:AddTrust_Public_Services_Root.pem
+Adding debian:CFCA_EV_ROOT.pem
+Adding debian:AffirmTrust_Networking.pem
+Adding debian:ComSign_CA.pem
+Adding debian:Certinomis_-_Root_CA.pem
+Adding debian:StartCom_Certification_Authority_G2.pem
+Adding debian:Staat_der_Nederlanden_Root_CA.pem
+Adding debian:Buypass_Class_2_Root_CA.pem
+Adding debian:TC_TrustCenter_Class_3_CA_II.pem
+Adding debian:Comodo_AAA_Services_root.pem
+Adding debian:Cybertrust_Global_Root.pem
+Adding debian:Staat_der_Nederlanden_Root_CA_-_G3.pem
+Adding debian:Comodo_Trusted_Services_root.pem
+Adding debian:Certinomis_-_Autorité_Racine.pem
+Adding debian:certSIGN_ROOT_CA.pem
+Adding debian:EE_Certification_Centre_Root_CA.pem
+Adding debian:VeriSign_Universal_Root_Certification_Authority.pem
+Adding debian:QuoVadis_Root_CA_3.pem
+Adding debian:Global_Chambersign_Root_-_2008.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+Adding debian:COMODO_RSA_Certification_Authority.pem
+Adding debian:TeliaSonera_Root_CA_v1.pem
+Adding debian:Trustis_FPS_Root_CA.pem
+Adding debian:GlobalSign_Root_CA.pem
+Adding debian:AddTrust_Low-Value_Services_Root.pem
+Adding debian:NetLock_Qualified_=Class_QA=_Root.pem
+Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
+Adding debian:ACCVRAIZ1.pem
+Adding debian:ePKI_Root_Certification_Authority.pem
+Adding debian:ACEDICOM_Root.pem
+Adding debian:XRamp_Global_CA_Root.pem
+Adding debian:TÜBİTAK_UEKAE_Kök_Sertifika_Hizmet_Sağlayıcısı_-_Sürüm_3.pem
+Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
+Adding debian:Buypass_Class_2_CA_1.pem
+Adding debian:DigiCert_Global_Root_G3.pem
+Adding debian:Certification_Authority_of_WoSign_G2.pem
+Adding debian:Certplus_Class_2_Primary_CA.pem
+Adding debian:Equifax_Secure_eBusiness_CA_1.pem
+Adding debian:Camerfirma_Chambers_of_Commerce_Root.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+Adding debian:TURKTRUST_Certificate_Services_Provider_Root_2007.pem
+Adding debian:Security_Communication_RootCA2.pem
+Adding debian:CA_WoSign_ECC_Root.pem
+Adding debian:AC_Raíz_Certicámara_S.A..pem
+Adding debian:StartCom_Certification_Authority_2.pem
+done.
+Setting up default-jre-headless (2:1.8-56ubuntu2) ...
+Setting up openjdk-8-jre:amd64 (8u121-b13-0ubuntu1.16.04.2) ...
+update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/policytool to provide /usr/bin/policytool (policytool) in auto mode
+Setting up default-jre (2:1.8-56ubuntu2) ...
+Setting up gconf-service-backend (3.2.6-3ubuntu6) ...
+Setting up gconf2 (3.2.6-3ubuntu6) ...
+Setting up libgnomevfs2-common (1:2.24.4-6.1ubuntu1) ...
+Setting up libgnomevfs2-0:amd64 (1:2.24.4-6.1ubuntu1) ...
+Setting up libgnome2-common (2.32.1-5ubuntu1) ...
+Setting up libgnome-2-0:amd64 (2.32.1-5ubuntu1) ...
+Processing triggers for libc-bin (2.23-0ubuntu5) ...
+Processing triggers for systemd (229-4ubuntu13) ...
+Processing triggers for sgml-base (1.26+nmu4ubuntu1) ...
+Processing triggers for ca-certificates (20160104ubuntu1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+
+done.
+done.
+root@d338b86de195:/nccu/ModelCode# dpkg --install openfire_4.0.3_all.deb
+(Reading database ... 23250 files and directories currently installed.)
+Preparing to unpack openfire_4.0.3_all.deb ...
+Unpacking openfire (4.0.3) ...
+Setting up openfire (4.0.3) ...
+adduser: Warning: The home directory `/var/lib/openfire' does not belong to the user you are currently creating.
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Processing triggers for systemd (229-4ubuntu13) ...
+root@d338b86de195:/nccu/ModelCode# dpkg --i openfire_4.0.3_all.deb      
+dpkg: error: unknown option --i
+
+Type dpkg --help for help about installing and deinstalling packages [*];
+Use 'apt' or 'aptitude' for user-friendly package management;
+Type dpkg -Dhelp for a list of dpkg debug flag values;
+Type dpkg --force-help for a list of forcing options;
+Type dpkg-deb --help for help about manipulating *.deb files;
+
+Options marked [*] produce a lot of output - pipe it through 'less' or 'more' !
+root@d338b86de195:/nccu/ModelCode# dpkg -i openfire_4.0.3_all.deb 
+(Reading database ... 23644 files and directories currently installed.)
+Preparing to unpack openfire_4.0.3_all.deb ...
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of stop.
+Unpacking openfire (4.0.3) over (4.0.3) ...
+Setting up openfire (4.0.3) ...
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Processing triggers for systemd (229-4ubuntu13) ...
+root@d338b86de195:/nccu/ModelCode# ls                                   
+FileToList.py     cloud.sh            merge.py                prepareFile        upload.py
+FileToList.pyc    cloud_scheduler.py  news                    scheduler_test.py  upload_history.py
+GetFilePaths.py   financeReport       newsPNV                 stockID_Name.txt   upload_price.py
+GetFilePaths.pyc  google-crawler.py   openfire_4.0.3_all.deb  stockReturn        web
+ID.csv            merge               predict.py              stock_price        xampp-linux-x64-7.0.9-1-installer.run
+<-O openfire.deb https://www.igniterealtime.org/downloads/download-landing.jsp?file=openfire/openfire_4.1.2_all.deb 
+--2017-02-21 07:20:14--  https://www.igniterealtime.org/downloads/download-landing.jsp?file=openfire/openfire_4.1.2_all.deb
+Resolving www.igniterealtime.org (www.igniterealtime.org)... 52.58.216.59
+Connecting to www.igniterealtime.org (www.igniterealtime.org)|52.58.216.59|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4718 (4.6K) [text/html]
+Saving to: 'openfire.deb'
+
+openfire.deb                  100%[================================================>]   4.61K  --.-KB/s    in 0s      
+
+2017-02-21 07:20:15 (251 MB/s) - 'openfire.deb' saved [4718/4718]
+
+root@d338b86de195:/nccu/ModelCode# ls                                         
+FileToList.py     cloud_scheduler.py  newsPNV                 stockID_Name.txt   web
+FileToList.pyc    financeReport       openfire.deb            stockReturn        xampp-linux-x64-7.0.9-1-installer.run
+GetFilePaths.py   google-crawler.py   openfire_4.0.3_all.deb  stock_price
+GetFilePaths.pyc  merge               predict.py              upload.py
+ID.csv            merge.py            prepareFile             upload_history.py
+cloud.sh          news                scheduler_test.py       upload_price.py
+root@d338b86de195:/nccu/ModelCode# sudo dpkg --install openfire.deb
+bash: sudo: command not found
+root@d338b86de195:/nccu/ModelCode# dpkg --install openfire.deb     
+dpkg-deb: error: 'openfire.deb' is not a debian format archive
+dpkg: error processing archive openfire.deb (--install):
+ subprocess dpkg-deb --control returned error exit status 2
+Errors were encountered while processing:
+ openfire.deb
+<-O openfire.deb https://www.igniterealtime.org/downloadServlet?filename=openfire/openfire_4.1.2_all.deb            
+--2017-02-21 07:21:31--  https://www.igniterealtime.org/downloadServlet?filename=openfire/openfire_4.1.2_all.deb
+Resolving www.igniterealtime.org (www.igniterealtime.org)... 52.58.216.59
+Connecting to www.igniterealtime.org (www.igniterealtime.org)|52.58.216.59|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: http://download.igniterealtime.org/openfire/openfire_4.1.2_all.deb [following]
+--2017-02-21 07:21:32--  http://download.igniterealtime.org/openfire/openfire_4.1.2_all.deb
+Resolving download.igniterealtime.org (download.igniterealtime.org)... 52.58.216.59
+Connecting to download.igniterealtime.org (download.igniterealtime.org)|52.58.216.59|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github.com/igniterealtime/Openfire/releases/download/v4.1.2/openfire_4.1.2_all.deb [following]
+--2017-02-21 07:21:33--  https://github.com/igniterealtime/Openfire/releases/download/v4.1.2/openfire_4.1.2_all.deb
+Resolving github.com (github.com)... 192.30.253.113, 192.30.253.112
+Connecting to github.com (github.com)|192.30.253.113|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-cloud.s3.amazonaws.com/releases/18511687/b2441e1a-f5c0-11e6-836c-a44210853785.deb?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISTNZFOVBIJMK3TQ%2F20170221%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20170221T072205Z&X-Amz-Expires=300&X-Amz-Signature=ea51d997c7037ba74b0e5a6b30ad7bc32c1ea4297b1f884aab23bb4bb61da391&X-Amz-SignedHeaders=host&actor_id=0&response-content-disposition=attachment%3B%20filename%3Dopenfire_4.1.2_all.deb&response-content-type=application%2Foctet-stream [following]
+--2017-02-21 07:21:34--  https://github-cloud.s3.amazonaws.com/releases/18511687/b2441e1a-f5c0-11e6-836c-a44210853785.deb?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISTNZFOVBIJMK3TQ%2F20170221%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20170221T072205Z&X-Amz-Expires=300&X-Amz-Signature=ea51d997c7037ba74b0e5a6b30ad7bc32c1ea4297b1f884aab23bb4bb61da391&X-Amz-SignedHeaders=host&actor_id=0&response-content-disposition=attachment%3B%20filename%3Dopenfire_4.1.2_all.deb&response-content-type=application%2Foctet-stream
+Resolving github-cloud.s3.amazonaws.com (github-cloud.s3.amazonaws.com)... 52.216.225.0
+Connecting to github-cloud.s3.amazonaws.com (github-cloud.s3.amazonaws.com)|52.216.225.0|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 21917698 (21M) [application/octet-stream]
+Saving to: 'openfire.deb'
+
+openfire.deb                  100%[================================================>]  20.90M  4.51MB/s    in 9.0s    
+
+2017-02-21 07:21:44 (2.32 MB/s) - 'openfire.deb' saved [21917698/21917698]
+
+root@d338b86de195:/nccu/ModelCode# dpkg --install openfire.deb                
+(Reading database ... 23644 files and directories currently installed.)
+Preparing to unpack openfire.deb ...
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of stop.
+Unpacking openfire (4.1.2) over (4.0.3) ...
+Setting up openfire (4.1.2) ...
+Installing new version of config file /etc/openfire/log4j.xml ...
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Processing triggers for systemd (229-4ubuntu13) ...
+root@d338b86de195:/nccu/ModelCode# cd ..                                      
+root@d338b86de195:/nccu# cd ..
+root@d338b86de195:/# ls
+bin  boot  dev  etc  home  lib  lib64  media  mnt  nccu  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@d338b86de195:/# cd home/
+root@d338b86de195:/home# ls
+deploy
+root@d338b86de195:/home# cd deploy/
+root@d338b86de195:/home/deploy# ls
+<w.igniterealtime.org/downloadServlet?filename=openfire/openfire_4.1.2_all.deb
+--2017-02-21 07:23:08--  https://www.igniterealtime.org/downloadServlet?filename=openfire/openfire_4.1.2_all.deb
+Resolving www.igniterealtime.org (www.igniterealtime.org)... 52.58.216.59
+Connecting to www.igniterealtime.org (www.igniterealtime.org)|52.58.216.59|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: http://download.igniterealtime.org/openfire/openfire_4.1.2_all.deb [following]
+--2017-02-21 07:23:09--  http://download.igniterealtime.org/openfire/openfire_4.1.2_all.deb
+Resolving download.igniterealtime.org (download.igniterealtime.org)... 52.58.216.59
+Connecting to download.igniterealtime.org (download.igniterealtime.org)|52.58.216.59|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github.com/igniterealtime/Openfire/releases/download/v4.1.2/openfire_4.1.2_all.deb [following]
+--2017-02-21 07:23:10--  https://github.com/igniterealtime/Openfire/releases/download/v4.1.2/openfire_4.1.2_all.deb
+Resolving github.com (github.com)... 192.30.253.113, 192.30.253.112
+Connecting to github.com (github.com)|192.30.253.113|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-cloud.s3.amazonaws.com/releases/18511687/b2441e1a-f5c0-11e6-836c-a44210853785.deb?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISTNZFOVBIJMK3TQ%2F20170221%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20170221T072342Z&X-Amz-Expires=300&X-Amz-Signature=dc360d62860e9119fb354792eb51ab6320aa36609422dbfb271111b31157b2bd&X-Amz-SignedHeaders=host&actor_id=0&response-content-disposition=attachment%3B%20filename%3Dopenfire_4.1.2_all.deb&response-content-type=application%2Foctet-stream [following]
+--2017-02-21 07:23:10--  https://github-cloud.s3.amazonaws.com/releases/18511687/b2441e1a-f5c0-11e6-836c-a44210853785.deb?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISTNZFOVBIJMK3TQ%2F20170221%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20170221T072342Z&X-Amz-Expires=300&X-Amz-Signature=dc360d62860e9119fb354792eb51ab6320aa36609422dbfb271111b31157b2bd&X-Amz-SignedHeaders=host&actor_id=0&response-content-disposition=attachment%3B%20filename%3Dopenfire_4.1.2_all.deb&response-content-type=application%2Foctet-stream
+Resolving github-cloud.s3.amazonaws.com (github-cloud.s3.amazonaws.com)... 54.231.40.227
+Connecting to github-cloud.s3.amazonaws.com (github-cloud.s3.amazonaws.com)|54.231.40.227|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 21917698 (21M) [application/octet-stream]
+Saving to: 'openfire.deb'
+
+openfire.deb                  100%[================================================>]  20.90M  3.25MB/s    in 21s     
+
+2017-02-21 07:23:33 (1007 KB/s) - 'openfire.deb' saved [21917698/21917698]
+
+root@d338b86de195:/home/deploy# dpkg --install openfire.deb                   
+(Reading database ... 23668 files and directories currently installed.)
+Preparing to unpack openfire.deb ...
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of stop.
+Unpacking openfire (4.1.2) over (4.1.2) ...
+Setting up openfire (4.1.2) ...
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Processing triggers for systemd (229-4ubuntu13) ...
+root@d338b86de195:/home/deploy# cd ..
+root@d338b86de195:/home# cd ..
+root@d338b86de195:/# ls 
+bin  boot  dev  etc  home  lib  lib64  media  mnt  nccu  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@d338b86de195:/# cd nccu/
+root@d338b86de195:/nccu# ls
+ModelCode  ModelCode.zip
+root@d338b86de195:/nccu# cd ModelCode
+root@d338b86de195:/nccu/ModelCode# ls
+FileToList.py     cloud_scheduler.py  newsPNV                 stockID_Name.txt   web
+FileToList.pyc    financeReport       openfire.deb            stockReturn        xampp-linux-x64-7.0.9-1-installer.run
+GetFilePaths.py   google-crawler.py   openfire_4.0.3_all.deb  stock_price
+GetFilePaths.pyc  merge               predict.py              upload.py
+ID.csv            merge.py            prepareFile             upload_history.py
+cloud.sh          news                scheduler_test.py       upload_price.py
+root@d338b86de195:/nccu/ModelCode# lsb_release -a
+bash: lsb_release: command not found
+root@d338b86de195:/nccu/ModelCode# runlevel
+unknown
+root@d338b86de195:/nccu/ModelCode# ls
+FileToList.py     cloud_scheduler.py  newsPNV                 stockID_Name.txt   web
+FileToList.pyc    financeReport       openfire.deb            stockReturn        xampp-linux-x64-7.0.9-1-installer.run
+GetFilePaths.py   google-crawler.py   openfire_4.0.3_all.deb  stock_price
+GetFilePaths.pyc  merge               predict.py              upload.py
+ID.csv            merge.py            prepareFile             upload_history.py
+cloud.sh          news                scheduler_test.py       upload_price.py
+root@d338b86de195:/nccu/ModelCode# sed -i "s/^exit 101$/exit 0/" /usr/sbin/policy-rc.d
+root@d338b86de195:/nccu/ModelCode# dpkg --install openfire.deb                        
+(Reading database ... 23668 files and directories currently installed.)
+Preparing to unpack openfire.deb ...
+invoke-rc.d: could not determine current runlevel
+best java alternative in: /usr/lib/jvm/java-8-openjdk-amd64/jre
+Stopping openfire: openfire.
+Unpacking openfire (4.1.2) over (4.1.2) ...
+Setting up openfire (4.1.2) ...
+invoke-rc.d: could not determine current runlevel
+best java alternative in: /usr/lib/jvm/java-8-openjdk-amd64/jre
+Starting openfire: openfire.
+Processing triggers for systemd (229-4ubuntu13) ...
+root@d338b86de195:/nccu/ModelCode# dpkg --install openfire_4.0.3_all.deb 
+dpkg: warning: downgrading openfire from 4.1.2 to 4.0.3
+(Reading database ... 23668 files and directories currently installed.)
+Preparing to unpack openfire_4.0.3_all.deb ...
+invoke-rc.d: could not determine current runlevel
+best java alternative in: /usr/lib/jvm/java-8-openjdk-amd64/jre
+Stopping openfire: openfire.
+Unpacking openfire (4.0.3) over (4.1.2) ...
+Setting up openfire (4.0.3) ...
+Installing new version of config file /etc/openfire/log4j.xml ...
+invoke-rc.d: could not determine current runlevel
+best java alternative in: /usr/lib/jvm/java-8-openjdk-amd64/jre
+Starting openfire: openfire.
+Processing triggers for systemd (229-4ubuntu13) ...
+root@d338b86de195:/nccu/ModelCode# ifconfig
+bash: ifconfig: command not found
+root@d338b86de195:/nccu/ModelCode# ipconfig
+bash: ipconfig: command not found
+root@d338b86de195:/nccu/ModelCode# ls
+FileToList.py     cloud_scheduler.py  newsPNV                 stockID_Name.txt   web
+FileToList.pyc    financeReport       openfire.deb            stockReturn        xampp-linux-x64-7.0.9-1-installer.run
+GetFilePaths.py   google-crawler.py   openfire_4.0.3_all.deb  stock_price
+GetFilePaths.pyc  merge               predict.py              upload.py
+ID.csv            merge.py            prepareFile             upload_history.py
+cloud.sh          news                scheduler_test.py       upload_price.py
+root@d338b86de195:/nccu/ModelCode# ifconfig
+bash: ifconfig: command not found
+root@d338b86de195:/nccu/ModelCode# ls
+FileToList.py     cloud_scheduler.py  newsPNV                 stockID_Name.txt   web
+FileToList.pyc    financeReport       openfire.deb            stockReturn        xampp-linux-x64-7.0.9-1-installer.run
+GetFilePaths.py   google-crawler.py   openfire_4.0.3_all.deb  stock_price
+GetFilePaths.pyc  merge               predict.py              upload.py
+ID.csv            merge.py            prepareFile             upload_history.py
+cloud.sh          news                scheduler_test.py       upload_price.py
+root@d338b86de195:/nccu/ModelCode# /etc/init.d/openfire start
+best java alternative in: /usr/lib/jvm/java-8-openjdk-amd64/jre
+Starting openfire: openfire.
+root@d338b86de195:/nccu/ModelCode# /etc/init.d/openfire stop 
+best java alternative in: /usr/lib/jvm/java-8-openjdk-amd64/jre
+Stopping openfire: openfire.
+root@d338b86de195:/nccu/ModelCode# /etc/init.d/openfire start
+best java alternative in: /usr/lib/jvm/java-8-openjdk-amd64/jre
+Starting openfire: openfire.
+root@d338b86de195:/nccu/ModelCode# /etc/init.d/openfire restart
+best java alternative in: /usr/lib/jvm/java-8-openjdk-amd64/jre
+Restarting openfire: openfire.
+root@d338b86de195:/nccu/ModelCode# ls
+FileToList.py     cloud_scheduler.py  newsPNV                 stockID_Name.txt   web
+FileToList.pyc    financeReport       openfire.deb            stockReturn        xampp-linux-x64-7.0.9-1-installer.run
+GetFilePaths.py   google-crawler.py   openfire_4.0.3_all.deb  stock_price
+GetFilePaths.pyc  merge               predict.py              upload.py
+ID.csv            merge.py            prepareFile             upload_history.py
+cloud.sh          news                scheduler_test.py       upload_price.py
+root@d338b86de195:/nccu/ModelCode# ls
+FileToList.py     cloud_scheduler.py  newsPNV                 stockID_Name.txt   web
+FileToList.pyc    financeReport       openfire.deb            stockReturn        xampp-linux-x64-7.0.9-1-installer.run
+GetFilePaths.py   google-crawler.py   openfire_4.0.3_all.deb  stock_price
+GetFilePaths.pyc  merge               predict.py              upload.py
+ID.csv            merge.py            prepareFile             upload_history.py
+cloud.sh          news                scheduler_test.py       upload_price.py
+root@d338b86de195:/nccu/ModelCode# ifconfig
+bash: ifconfig: command not found
+root@d338b86de195:/nccu/ModelCode# ls
+FileToList.py     cloud_scheduler.py  newsPNV                 stockID_Name.txt   web
+FileToList.pyc    financeReport       openfire.deb            stockReturn        xampp-linux-x64-7.0.9-1-installer.run
+GetFilePaths.py   google-crawler.py   openfire_4.0.3_all.deb  stock_price
+GetFilePaths.pyc  merge               predict.py              upload.py
+ID.csv            merge.py            prepareFile             upload_history.py
+cloud.sh          news                scheduler_test.py       upload_price.py
+root@d338b86de195:/nccu/ModelCode# /opt/lampp/lampp start
+Starting XAMPP for Linux 7.0.9-1...
+XAMPP: Starting Apache...already running.
+XAMPP: Starting MySQL.../opt/lampp/share/xampp/xampplib: line 22: netstat: command not found
+ok.
+XAMPP: Starting ProFTPD.../opt/lampp/share/xampp/xampplib: line 22: netstat: command not found
+ok.
+root@d338b86de195:/nccu/ModelCode# ps -ef | grep openfire
+openfire  9780     1  0 07:31 ?        00:00:02 /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -server -DopenfireHome=/usr/share/openfire -Dopenfire.lib.dir=/usr/share/openfire/lib -classpath /usr/share/openfire/lib/startup.jar -jar /usr/share/openfire/lib/startup.jar
+openfire  9873     1  0 07:31 ?        00:00:02 /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -server -DopenfireHome=/usr/share/openfire -Dopenfire.lib.dir=/usr/share/openfire/lib -classpath /usr/share/openfire/lib/startup.jar -jar /usr/share/openfire/lib/startup.jar
+openfire  9932     1  0 07:37 ?        00:00:02 /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -server -DopenfireHome=/usr/share/openfire -Dopenfire.lib.dir=/usr/share/openfire/lib -classpath /usr/share/openfire/lib/startup.jar -jar /usr/share/openfire/lib/startup.jar
+openfire  9977     1  0 07:37 ?        00:00:02 /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -server -DopenfireHome=/usr/share/openfire -Dopenfire.lib.dir=/usr/share/openfire/lib -classpath /usr/share/openfire/lib/startup.jar -jar /usr/share/openfire/lib/startup.jar
+openfire 10019     1  0 07:39 ?        00:00:02 /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -server -DopenfireHome=/usr/share/openfire -Dopenfire.lib.dir=/usr/share/openfire/lib -classpath /usr/share/openfire/lib/startup.jar -jar /usr/share/openfire/lib/startup.jar
+root     10283   195  0 07:44 ?        00:00:00 grep --color=auto openfire
+root@d338b86de195:/nccu/ModelCode# ps -ef | grep openfire
+openfire  9780     1  0 07:31 ?        00:00:02 /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -server -DopenfireHome=/usr/share/openfire -Dopenfire.lib.dir=/usr/share/openfire/lib -classpath /usr/share/openfire/lib/startup.jar -jar /usr/share/openfire/lib/startup.jar
+openfire  9873     1  0 07:31 ?        00:00:02 /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -server -DopenfireHome=/usr/share/openfire -Dopenfire.lib.dir=/usr/share/openfire/lib -classpath /usr/share/openfire/lib/startup.jar -jar /usr/share/openfire/lib/startup.jar
+openfire  9932     1  0 07:37 ?        00:00:02 /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -server -DopenfireHome=/usr/share/openfire -Dopenfire.lib.dir=/usr/share/openfire/lib -classpath /usr/share/openfire/lib/startup.jar -jar /usr/share/openfire/lib/startup.jar
+openfire  9977     1  0 07:37 ?        00:00:02 /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -server -DopenfireHome=/usr/share/openfire -Dopenfire.lib.dir=/usr/share/openfire/lib -classpath /usr/share/openfire/lib/startup.jar -jar /usr/share/openfire/lib/startup.jar
+openfire 10019     1  0 07:39 ?        00:00:02 /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -server -DopenfireHome=/usr/share/openfire -Dopenfire.lib.dir=/usr/share/openfire/lib -classpath /usr/share/openfire/lib/startup.jar -jar /usr/share/openfire/lib/startup.jar
+root     10291   195  0 07:46 ?        00:00:00 grep --color=auto openfire
+root@d338b86de195:/nccu/ModelCode# netstat -tuap
+bash: netstat: command not found
+root@d338b86de195:/nccu/ModelCode# apt-get install net-tols
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package net-tols
+root@d338b86de195:/nccu/ModelCode# netstat -tuap           
+bash: netstat: command not found
+root@d338b86de195:/nccu/ModelCode# apt-get install net-tools
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  net-tools
+0 upgraded, 1 newly installed, 0 to remove and 14 not upgraded.
+Need to get 175 kB of archives.
+After this operation, 725 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 net-tools amd64 1.60-26ubuntu1 [175 kB]
+Fetched 175 kB in 1s (132 kB/s)     
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package net-tools.
+(Reading database ... 23644 files and directories currently installed.)
+Preparing to unpack .../net-tools_1.60-26ubuntu1_amd64.deb ...
+Unpacking net-tools (1.60-26ubuntu1) ...
+Setting up net-tools (1.60-26ubuntu1) ...
+root@d338b86de195:/nccu/ModelCode# netstat -tuap            
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 *:ssh                   *:*                     LISTEN      -               
+tcp        0      0 d338b86de195:39393      steelix.canonical.:http TIME_WAIT   -               
+tcp6       0      0 [::]:9090               [::]:*                  LISTEN      -               
+tcp6       0      0 [::]:mysql              [::]:*                  LISTEN      -               
+tcp6       0      0 [::]:http               [::]:*                  LISTEN      -               
+tcp6       0      0 [::]:ftp                [::]:*                  LISTEN      -               
+tcp6       0      0 [::]:ssh                [::]:*                  LISTEN      -               
+tcp6       0      0 [::]:https              [::]:*                  LISTEN      -               
+root@d338b86de195:/nccu/ModelCode# netstat
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 d338b86de195:39393      steelix.canonical.:http TIME_WAIT  
+Active UNIX domain sockets (w/o servers)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ]         STREAM     CONNECTED     1107267647 
+unix  2      [ ]         STREAM     CONNECTED     1107189545 
+unix  2      [ ]         STREAM     CONNECTED     1107293806 
+unix  2      [ ]         STREAM     CONNECTED     1107266114 
+unix  2      [ ]         STREAM     CONNECTED     1107194941 
+unix  2      [ ]         STREAM     CONNECTED     1107271002 
+unix  2      [ ]         STREAM     CONNECTED     1107187286 
+unix  2      [ ]         STREAM     CONNECTED     1107295485 
+unix  2      [ ]         STREAM     CONNECTED     1107272090 
+unix  2      [ ]         STREAM     CONNECTED     1107192247 
+root@d338b86de195:/nccu/ModelCode# python google-crawler.py 
+Traceback (most recent call last):
+  File "google-crawler.py", line 3, in <module>
+    from bs4 import BeautifulSoup
+ImportError: No module named bs4
+root@d338b86de195:/nccu/ModelCode# pip install beautifulsoup 
+Collecting beautifulsoup
+  Downloading BeautifulSoup-3.2.1.tar.gz
+Building wheels for collected packages: beautifulsoup
+  Running setup.py bdist_wheel for beautifulsoup ... done
+  Stored in directory: /root/.cache/pip/wheels/5e/be/6d/ed01d5d434a821557b674c9da976f60b1b93d9009447eb9d16
+Successfully built beautifulsoup
+Installing collected packages: beautifulsoup
+Successfully installed beautifulsoup-3.2.1
+root@d338b86de195:/nccu/ModelCode# python google-crawler.py 
+Traceback (most recent call last):
+  File "google-crawler.py", line 3, in <module>
+    from bs4 import BeautifulSoup
+ImportError: No module named bs4
+root@d338b86de195:/nccu/ModelCode# pip install bs4          
+Collecting bs4
+  Downloading bs4-0.0.1.tar.gz
+Collecting beautifulsoup4 (from bs4)
+  Downloading beautifulsoup4-4.5.3-py2-none-any.whl (85kB)
+    100% |################################| 92kB 619kB/s 
+Building wheels for collected packages: bs4
+  Running setup.py bdist_wheel for bs4 ... done
+  Stored in directory: /root/.cache/pip/wheels/84/67/d4/9e09d9d5adede2ee1c7b7e8775ba3fbb04d07c4f946f0e4f11
+Successfully built bs4
+Installing collected packages: beautifulsoup4, bs4
+Successfully installed beautifulsoup4-4.5.3 bs4-0.0.1
+root@d338b86de195:/nccu/ModelCode# python google-crawler.py 
+Traceback (most recent call last):
+  File "google-crawler.py", line 137, in <module>
+    process();
+  File "google-crawler.py", line 103, in process
+    ID=read_id()
+  File "google-crawler.py", line 74, in read_id
+    with open("./stockReturn/tej/"+yesterday[0:4]+"/"+yesterday+".txt", "r") as text:
+IOError: [Errno 2] No such file or directory: './stockReturn/tej/2017/20170220.txt'
+root@d338b86de195:/nccu/ModelCode# python predict.py        
+Date : 20170221
+Traceback (most recent call last):
+  File "predict.py", line 295, in <module>
+    process_news_list(yd);
+  File "predict.py", line 78, in process_news_list
+    newsList = os.listdir(rootFolder + newsFolder + whatYear + '/' + whatMonth + '/' + yesterDay + '/'); 
+OSError: [Errno 2] No such file or directory: 'news/2017/02/20170221/'
+root@d338b86de195:/nccu/ModelCode# python merge.py   
+20170221
+20170221
+Traceback (most recent call last):
+  File "merge.py", line 267, in <module>
+    mergeP(tDay);
+  File "merge.py", line 158, in mergeP
+    f5v = getF5V(inDate); 
+  File "merge.py", line 110, in getF5V
+    IO = open(rootFolder + financeFolder + dataYear + '/' + fYear + fMonth + '.txt', mode = 'r'); 
+IOError: [Errno 2] No such file or directory: 'financeReport/tej/2017/201709.txt'
+root@d338b86de195:/nccu/ModelCode# python upload     
+python: can't open file 'upload': [Errno 2] No such file or directory
+root@d338b86de195:/nccu/ModelCode# python upload.py 
+Traceback (most recent call last):
+  File "upload.py", line 138, in <module>
+    get_file(toDay);
+  File "upload.py", line 89, in get_file
+    if if_in_db(Day):
+  File "upload.py", line 58, in if_in_db
+    db = MySQLdb.connect(host="127.0.0.1", user="root", passwd="", db="Stock",charset="utf8")	
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 204, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+_mysql_exceptions.OperationalError: (1049, "Unknown database 'Stock'")
+root@d338b86de195:/nccu/ModelCode# python cloud_scheduler.py 
+^CTraceback (most recent call last):
+  File "cloud_scheduler.py", line 15, in <module>
+    sched.start()
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 19, in start
+    self._main_loop()
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 28, in _main_loop
+    self._event.wait(wait_seconds)
+  File "/usr/lib/python2.7/threading.py", line 614, in wait
+    self.__cond.wait(timeout)
+  File "/usr/lib/python2.7/threading.py", line 359, in wait
+    _sleep(delay)
+KeyboardInterrupt
+root@d338b86de195:/nccu/ModelCode# find / -name "httpd-xampp.conf"
+/opt/lampp/etc/extra/httpd-xampp.conf
+root@d338b86de195:/nccu/ModelCode# vim /opt/lampp/etc/extra/httpd-
+bash: vim: command not found
+root@d338b86de195:/nccu/ModelCode# vim /opt/lampp/etc/extra/httpd-xampp.conf 
+bash: vim: command not found
+root@d338b86de195:/nccu/ModelCode# vi /opt/lampp/etc/extra/httpd-xampp.conf  
+bash: vi: command not found
+root@d338b86de195:/nccu/ModelCode# apt-get install vi
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package vi
+root@d338b86de195:/nccu/ModelCode# apt-get install vim
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libgpm2 libpython3.5 vim-common vim-runtime
+Suggested packages:
+  gpm ctags vim-doc vim-scripts vim-gnome-py2 | vim-gtk-py2 | vim-gtk3-py2 | vim-athena-py2 | vim-nox-py2
+The following NEW packages will be installed:
+  libgpm2 libpython3.5 vim vim-common vim-runtime
+0 upgraded, 5 newly installed, 0 to remove and 14 not upgraded.
+Need to get 7679 kB of archives.
+After this operation, 35.1 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgpm2 amd64 1.20.4-6.1 [16.5 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 vim-common amd64 2:7.4.1689-3ubuntu1.2 [103 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython3.5 amd64 3.5.2-2ubuntu0~16.04.1 [1360 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 vim-runtime all 2:7.4.1689-3ubuntu1.2 [5164 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 vim amd64 2:7.4.1689-3ubuntu1.2 [1036 kB]
+Fetched 7679 kB in 4s (1807 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libgpm2:amd64.
+(Reading database ... 23692 files and directories currently installed.)
+Preparing to unpack .../libgpm2_1.20.4-6.1_amd64.deb ...
+Unpacking libgpm2:amd64 (1.20.4-6.1) ...
+Selecting previously unselected package vim-common.
+Preparing to unpack .../vim-common_2%3a7.4.1689-3ubuntu1.2_amd64.deb ...
+Unpacking vim-common (2:7.4.1689-3ubuntu1.2) ...
+Selecting previously unselected package libpython3.5:amd64.
+  eparing to unpack .../libpython3.5_3.5.2-2ubuntu0~16.04.1_amd64.deb ...
+Unpacking libpython3.5:amd64 (3.5.2-2ubuntu0~16.04.1) ...
+Selecting previously unselected package vim-runtime.
+Preparing to unpack .../vim-runtime_2%3a7.4.1689-3ubuntu1.2_all.deb ...
+Adding 'diversion of /usr/share/vim/vim74/doc/help.txt to /usr/share/vim/vim74/doc/help.txt.vim-tiny by vim-runtime'
+Adding 'diversion of /usr/share/vim/vim74/doc/tags to /usr/share/vim/vim74/doc/tags.vim-tiny by vim-runtime'
+Unpacking vim-runtime (2:7.4.1689-3ubuntu1.2) ...
+Selecting previously unselected package vim.
+Preparing to unpack .../vim_2%3a7.4.1689-3ubuntu1.2_amd64.deb ...
+Unpacking vim (2:7.4.1689-3ubuntu1.2) ...
+Processing triggers for mime-support (3.59ubuntu1) ...
+Processing triggers for hicolor-icon-theme (0.15-0ubuntu1) ...
+Processing triggers for libc-bin (2.23-0ubuntu5) ...
+Setting up libgpm2:amd64 (1.20.4-6.1) ...
+Setting up vim-common (2:7.4.1689-3ubuntu1.2) ...
+Setting up libpython3.5:amd64 (3.5.2-2ubuntu0~16.04.1) ...
+Setting up vim-runtime (2:7.4.1689-3ubuntu1.2) ...
+Setting up vim (2:7.4.1689-3ubuntu1.2) ...
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vim (vim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vimdiff (vimdiff) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rvim (rvim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rview (rview) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vi (vi) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/view (view) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/ex (ex) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor (editor) in auto mode
+Processing triggers for libc-bin (2.23-0ubuntu5) ...
+root@d338b86de195:/nccu/ModelCode# vim /opt/lampp/etc/extra/httpd-xampp.conf 
+
+#<IfDefine PHP4>
+#LoadModule php4_module        modules/libphp4.so
+#</IfDefine>
+#<IfDefine PHP7>
+#LoadModule php7_module        modules/libphp7.so
+#</IfDefine>
+
+# We will enable it by default
+#<IfDefine PHP>
+   LoadModule php7_module        modules/libphp7.so
+#</IfDefine>
+
+LoadModule perl_module        modules/mod_perl.so
+
+Alias /phpmyadmin "/opt/lampp/phpmyadmin"
+Alias /phpsqliteadmin "/opt/lampp/phpsqliteadmin"
+
+# since XAMPP 1.4.3
+<Directory "/opt/lampp/phpmyadmin">
+    AllowOverride AuthConfig Limit
+    Require local
+    ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+</Directory>
+
+<Directory "/opt/lampp/phpsqliteadmin">
+    AllowOverride AuthConfig Limit
+    Require local
+    ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+</Directory>
+
+#<IfDefine PHP4>
+#LoadModule php4_module        modules/libphp4.so
+#</IfDefine>
+#<IfDefine PHP7>
+#LoadModule php7_module        modules/libphp7.so
+#</IfDefine>
+
+# We will enable it by default
+#<IfDefine PHP>
+   LoadModule php7_module        modules/libphp7.so
+#</IfDefine>
+
+LoadModule perl_module        modules/mod_perl.so
+
+Alias /phpmyadmin "/opt/lampp/phpmyadmin"
+Alias /phpsqliteadmin "/opt/lampp/phpsqliteadmin"
+
+# since XAMPP 1.4.3
+<Directory "/opt/lampp/phpmyadmin">
+    AllowOverride AuthConfig Limit
+    Require all granted
+    ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+</Directory>
+
+<Directory "/opt/lampp/phpsqliteadmin">
+    AllowOverride AuthConfig Limit
+    Require all granted
+    ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+</Directory>
+                                                                                                     
+Entering Ex mode.  Type "visual" to go to Normal mode.                                               
+    ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+:wq
+"/opt/lampp/etc/extra/httpd-xampp.conf" 58L, 1580C written
+root@d338b86de195:/nccu/ModelCode# /opt/lampp/lampp restart                  
+Restarting XAMPP for Linux 7.0.9-1...
+XAMPP: Stopping Apache...ok.
+XAMPP: Stopping MySQL...ok.
+XAMPP: Stopping ProFTPD...ok.
+XAMPP: Starting Apache...ok.
+XAMPP: Starting MySQL...ok.
+XAMPP: Starting ProFTPD...ok.
+root@d338b86de195:/nccu/ModelCode#                                           

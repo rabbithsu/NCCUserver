@@ -1,0 +1,52 @@
+python套件安裝：
+apt-get update
+sudo apt-get install python-pip
+pip install requests
+sudo apt-get install python-mysqldb
+pip install apscheduler
+
+
+xampp伺服器安裝及執行：
+sudo chmod +x xampp-linux-x64-7.0.9-1-installer.run
+sudo ./xampp-linux-x64-7.0.9-1-installer.run
+/opt/lampp/lampp start
+
+
+Openfire伺服器安裝及執行：
+apt-get install default-jre
+sed -i "s/^exit 101$/exit 0/" /usr/sbin/policy-rc.d
+sudo dpkg --install openfire_4.0.3_all.deb
+/etc/init.d/openfire start
+/etc/init.d/openfire stop
+/etc/init.d/openfire restart
+起始透過瀏覽器設定：localhost:9090
+
+
+將手機app查詢之php網頁放入xampp伺服器資料夾：
+檔案位於web資料夾中：
+cp newsphp7.php /opt/lampp/htdocs/
+
+
+MySQLDB資訊：
+可以以Stock.sql於phpMyAdmin匯入
+資料庫名稱：Stock
+帳號：root, 無密碼
+資料表： 編碼全用utf8mb4_general_ci, 欄位型態皆用TEXT
+news, 欄位：id, date, title, content
+predict, 欄位：id, date, result
+history, 欄位：id, ord, date, price, result
+
+APP程式碼需更新伺服器資訊：
+NewsConnector.java：第27行，更新後台資料伺服器位置。
+XMPPService.java：第36行，更新Openfire訊息伺服器位置。第59行，更新連接port。
+strings.xml：內含預設測試帳號密碼預先輸出，需更新或刪除。
+以Android Studio開發，build需連網匯入Smack Lib。
+
+
+起始系統：
+啟動運作兩個伺服器
+/opt/lampp/lampp start
+/etc/init.d/openfire start
+運行後台程式
+python cloud_schedule.py
+即完成。
